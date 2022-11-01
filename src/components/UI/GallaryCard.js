@@ -1,10 +1,11 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, useRouteMatch } from "react-router-dom";
 import Arrow from "../SVG/Arrow";
 import Card from "./Card";
 import classes from "./GallaryCard.module.css";
 
 const GallaryCard = (props) => {
+  const { path } = useRouteMatch();
   const history = useHistory();
 
   const cardImage = {
@@ -13,8 +14,8 @@ const GallaryCard = (props) => {
 
   const onClickHandle = () => {
     props.onToggleModal();
-    props.setCourseUrl(`${props.courseName}`)
-    history.push(`/${props.courseName}`);
+    props.setCourseUrl(`${props.courseName}`);
+    history.push(`/info/${props.courseName}`);
   };
 
   return (

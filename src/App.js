@@ -8,11 +8,12 @@ import Footer from "./components/Layout/footer/Footer";
 import Modal from "./components/UI/Modal";
 import CoursesFullContent from "./components/Layout/courses-expanded/CoursesFullContent";
 import Info from "./pages/Info";
-import { Route } from "react-router-dom";
+import { Redirect, Route, useRouteMatch } from "react-router-dom";
 
 const App = () => {
+  const { url, path } = useRouteMatch();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [courseUrl, setCourseUrl] = useState('');
+  const [courseUrl, setCourseUrl] = useState("");
 
   const modalToFalse = () => {
     setIsModalOpen(false);
@@ -22,21 +23,28 @@ const App = () => {
     setIsModalOpen(true);
   };
 
-  console.clear();
+
+  // console.clear();
   return (
     <div className="App overlay custom">
       <Info isModalOpen={isModalOpen}>
-        <Route path="/:courseId">
+        <Route path='/' exact>
+          <Redirect to='/info'/>
+        </Route>
+        <Route path={`/info/:courseId`}>
           <Modal
             modalToFalse={modalToFalse}
             isModalOpen={isModalOpen}
             style={{ marginTop: 90, borderRadius: 20 }}
             modalToTrue={modalToTrue}
           >
-            <CoursesFullContent modalToFalse={modalToFalse} courseUrl={courseUrl}/>
+            <CoursesFullContent
+              modalToFalse={modalToFalse}
+              courseUrl={courseUrl}
+            />
           </Modal>
         </Route>
-        <Route path="/">
+        <Route path={`/info`}>
           <Opening content={content} />
           <main className="main-content" role="main">
             <SortiesProccess content={content} />
