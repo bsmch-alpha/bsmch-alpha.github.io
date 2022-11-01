@@ -8,7 +8,7 @@ import Footer from "./components/Layout/footer/Footer";
 import Modal from "./components/UI/Modal";
 import CoursesFullContent from "./components/Layout/courses-expanded/CoursesFullContent";
 import Info from "./pages/Info";
-import { Redirect, Route, Switch, useLocation } from "react-router-dom";
+import { Link, Redirect, Route, Switch, useLocation } from "react-router-dom";
 
 const App = () => {
   const location = useLocation();
@@ -75,7 +75,14 @@ const App = () => {
             <Footer content={content} />
           </Route>
           <Route path="*">
-            <Redirect to="/info" />
+            <div>
+              <h1 className="title">שגיאה 404</h1>
+              <p className="sectionTitle">
+                נראה מפחיד? אל תדאגו, אנחנו פשוט לא הצלחנו למצוא את מה שחיפתם.
+              </p>
+              <p className="text">לחצו למטה כדי להגיע למקום מבטחים: </p>
+              <Link to="/info">חזרה למקום מבטחים</Link>
+            </div>
           </Route>
         </Switch>
       </Info>
