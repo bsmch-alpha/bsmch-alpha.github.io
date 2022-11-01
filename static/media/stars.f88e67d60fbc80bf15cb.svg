@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 149.57 139.61">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: .5;
+      }
+
+      .cls-2 {
+        mix-blend-mode: lighten;
+      }
+
+      .cls-3 {
+        isolation: isolate;
+      }
+
+      .cls-4 {
+        opacity: .8;
+      }
+
+      .cls-5 {
+        fill: #1dffff;
+      }
+
+      .cls-6 {
+        fill: #486375;
+      }
+    </style>
+  </defs>
+  <g class="cls-3">
+    <g id="Layer_2" data-name="Layer 2">
+      <g id="desktop">
+        <g id="Layer_4" data-name="Layer 4" class="cls-4">
+          <g>
+            <g>
+              <g class="cls-1">
+                <rect class="cls-6" width="3.51" height="3.51"/>
+              </g>
+              <g class="cls-1">
+                <rect class="cls-6" x="49.92" width="3.51" height="3.51"/>
+              </g>
+              <g class="cls-1">
+                <rect class="cls-5" x="49.92" y="44.15" width="3.51" height="3.51"/>
+              </g>
+              <g class="cls-1">
+                <rect class="cls-6" y="44.15" width="3.51" height="3.51"/>
+              </g>
+            </g>
+            <g>
+              <g class="cls-1">
+                <rect class="cls-6" y="91.95" width="3.51" height="3.51"/>
+              </g>
+              <g class="cls-1">
+                <rect class="cls-6" x="49.92" y="91.95" width="3.51" height="3.51"/>
+              </g>
+              <g class="cls-1">
+                <rect class="cls-6" x="49.92" y="136.1" width="3.51" height="3.51"/>
+              </g>
+              <g class="cls-1">
+                <rect class="cls-6" y="136.1" width="3.51" height="3.51"/>
+              </g>
+            </g>
+            <g>
+              <g class="cls-1">
+                <rect class="cls-6" x="96.14" width="3.51" height="3.51"/>
+              </g>
+              <g class="cls-1">
+                <rect class="cls-6" x="146.06" width="3.51" height="3.51"/>
+              </g>
+              <g class="cls-1">
+                <rect class="cls-6" x="146.06" y="44.15" width="3.51" height="3.51"/>
+              </g>
+              <g class="cls-1">
+                <rect class="cls-6" x="96.14" y="44.15" width="3.51" height="3.51"/>
+              </g>
+            </g>
+            <g>
+              <g class="cls-2">
+                <rect class="cls-6" x="96.14" y="91.95" width="3.51" height="3.51"/>
+              </g>
+              <g class="cls-1">
+                <rect class="cls-6" x="146.06" y="91.95" width="3.51" height="3.51"/>
+              </g>
+              <g class="cls-1">
+                <rect class="cls-6" x="146.06" y="136.1" width="3.51" height="3.51"/>
+              </g>
+              <g class="cls-1">
+                <rect class="cls-6" x="96.14" y="136.1" width="3.51" height="3.51"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
