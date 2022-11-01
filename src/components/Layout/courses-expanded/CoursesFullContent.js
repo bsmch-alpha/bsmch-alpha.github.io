@@ -33,7 +33,7 @@ const CoursesFullContent = (props) => {
   useEffect(() => {
     if (!props.isModalOpen === false) {
       setTimeout(() => {
-        history.push("/info");
+        history.push("/");
       }, 300);
     }
   }, [props.isModalOpen]);

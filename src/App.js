@@ -17,7 +17,7 @@ const App = () => {
 
   useEffect(() => {
     const newUrl = Array(...location.pathname)
-      .filter((letter, index) => index > 5)
+      .filter((letter, index) => index > 0 && letter !== '/')
       .join("");
 
     if (newUrl !== "") {
@@ -37,11 +37,11 @@ const App = () => {
     setIsModalOpen(true);
   };
 
-  console.clear();
+  // console.clear();
   return (
     <div className="App overlay custom">
       <Info isModalOpen={isModalOpen}>
-        <Route path={`/info/:courseId`}>
+        <Route path={`/:courseId`}>
           <Modal
             modalToFalse={modalToFalse}
             isModalOpen={isModalOpen}
@@ -55,10 +55,7 @@ const App = () => {
           </Modal>
         </Route>
         <Switch>
-          <Route path="/" exact>
-            <Redirect to="/info" />
-          </Route>
-          <Route path={`/info`}>
+          <Route path={`/`}>
             <Opening content={content} />
             <main className="main-content" role="main">
               <SortiesProccess content={content} />
@@ -81,7 +78,7 @@ const App = () => {
                 נראה מפחיד? אל תדאגו, אנחנו פשוט לא הצלחנו למצוא את מה שחיפתם.
               </p>
               <p className="text">לחצו למטה כדי להגיע למקום מבטחים: </p>
-              <Link to="/info">חזרה למקום מבטחים</Link>
+              <Link to="">חזרה למקום מבטחים</Link>
             </div>
           </Route>
         </Switch>

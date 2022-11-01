@@ -15,7 +15,7 @@ const GallaryCard = (props) => {
   const onClickHandle = () => {
     props.onToggleModal();
     props.setCourseUrl(`${props.courseName}`);
-    history.push(`/info/${props.courseName}`);
+    history.push(`/${props.courseName}`);
   };
 
   return (
