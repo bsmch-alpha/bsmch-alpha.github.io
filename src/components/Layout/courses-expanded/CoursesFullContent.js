@@ -42,11 +42,11 @@ const CoursesFullContent = (props) => {
     <article className={classes["article-container"]}>
       {content && (
         <>
-          <iframe
+          {/* <iframe
             className={classes["article-image"]}
             src={content.videoUrl}
             loading="lazy"
-          ></iframe>
+          ></iframe> */}
           <article>
             <div className={classes["brief"]}>
               <h3 className="sectionTitle">{content.title}</h3>
@@ -54,7 +54,7 @@ const CoursesFullContent = (props) => {
             </div>
             <ul className={`text ${classes["about-role"]}`}>{liElements}</ul>
           </article>
-          <CoursesFullGallary selecetedCourse={newUrl} content={content} />
+          {/* <CoursesFullGallary selecetedCourse={newUrl} content={content} /> */}
         </>
       )}
       <span
