@@ -14,13 +14,21 @@
 .footer {
   min-height: 80px;
   height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--dark-grey);
+}
+
+.text {
+  color: var(--white);
+  font-weight: 200;
 }
 
 .instagram-url {
   background-image: url("../../../assests/SVG/instagram.svg");
-  width: 40px;
-  height: 40px;
+  width:2em;
+  height:2em;
   background-repeat: no-repeat;
   background-size: cover;
   margin-left: 10px;
@@ -29,13 +37,20 @@
 
 .phone-url {
   background-image: url("../../../assests/SVG/phone.svg");
-  width: 40px;
-  height: 40px;
+  width:2em;
+  height:2em;
   background-repeat: no-repeat;
   background-size: cover;
   margin-left: 10px;
 }
-
+.whatsapp-url {
+  background-image: url("../../../assests/SVG/whatsapp.svg");
+  width:2em;
+  height:2em;
+  margin-left: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .contact-continaer {
   display: flex;
   justify-content: space-around;
@@ -53,3 +68,18 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+/* @media screen and (max-width: 913px) {
+  .instagram-url {
+    width: 40px;
+    height: 40px;
+  }
+
+  .phone-url {
+    width: 40px;
+    height: 40px;
+  }
+  .whatsapp-url {
+    width: 40px;
+    height: 40px;
+  }
+} */

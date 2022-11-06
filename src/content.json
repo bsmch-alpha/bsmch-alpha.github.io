@@ -1,7 +1,8 @@
 {
   "opening": {
-    "title": "מסלול אלפא",
-    "subTitle": "אגף התקשוב וההגנה בסייבר",
+    "subTitle": "מסלול אלפא",
+    "title": "מיון לאגף התקשוב וההגנה בסייבר",
+    "welcome": "אנו שמחים להודיעך כי בימים הקרובים תקבל/י זימון מקוון למיון מסלול אלפא באגף התקשוב וההגנה בסייבר.; להלן פירוט על הליך המיון והמקצועות במסלול:",
     "imgUrl": "./figure.png"
   },
   "about": {
@@ -54,8 +55,20 @@
           "urlKey": "data-analyst",
           "courseName": "מסלול Data Analyst",
           "courseImage": "/QA/QA_image.jpg",
-          "text": "מטרת הData Analyst  היא לסייע למפקדים בצה״ל לקבל החלטות מבוססות מידע.",
+          "text": "הData Analyst אחראי לעבד ולחקור את מקורות המידע של צה\"ל על מנת לייצר אנליצות מתקדמות ומערכות BI ולסייע למפקדים בצה״ל לקבל החלטות מבוססות מידע.",
           "id": 3
+        },
+        "lahavMatzovTochna": {
+          "urlKey": "lahav-matzov-tochna",
+          "courseName": "מסלול לה\"ב מצו\"ב תוכנה",
+          "courseImage": "/programming/programming_image.jpg",
+          "id": 4
+        },
+        "psi": {
+          "urlKey": "psi",
+          "courseName": "פס\"י",
+          "courseImage": "/QA/QA_image.jpg",
+          "id": 5
         }
       }
     },
@@ -67,7 +80,7 @@
           "urlKey": "magen-cyber",
           "courseName": "מסלול מגן סייבר",
           "courseImage": "/QA/QA_image.jpg",
-          "text": "מגן בסייבר הוא תפקיד בצה\"ל שמטרתו להכיר את רשתות צה\"ל ולהכן עליהן מפני כל חדירה.",
+          "text": "מגן בסייבר הוא תפקיד בצה\"ל שמטרתו להכיר את רשתות צה\"ל ולהגן עליהן מפני כל חדירה.",
           "id": 0
         },
         "devops": {
@@ -82,25 +95,60 @@
           "courseName": "מסלול SRE",
           "courseImage": "/devops/devops_image.jpg",
           "text": "בעולם שבו מערכות מידע הפכו לחלק אינטגרלי בכל היבט בחיינו, כל שניה היא קריטית ובצה\"ל בפרט. פיתוח מערכות המידע בצה\"ל מציל חיים. המערכות עוטפות את כלל ההיבטים בצהל - החל מיכולות הארגון (כגון לוגיסטיקה ורפואה) עד לכדי סיכול אירועים בטחוניים.",
+          "id": 2
+        },
+        "DC": {
+          "urlKey": "DC",
+          "courseName": "מנהל DC",
+          "courseImage": "/devops/devops_image.jpg",
+          "text": "קורס המכשיר את החניכים לנהל חוות שרתים מקצה לקצה ולהוות דרג ראשוני לתפעול תקלות בתחום.",
+          "id": 2
+        },
+        "matas": {
+          "urlKey": "mastas",
+          "courseName": "מסלול מט\"ס",
+          "courseImage": "/programming/programming_image.jpg",
           "id": 3
+        },
+        "cyberDefenceExecuter": {
+          "urlKey": "cyber-defence-executer",
+          "courseName": "מסלול מיישם הגנה בסייבר",
+          "courseImage": "/programming/programming_image.jpg",
+          "id": 4
+        },
+        "magenSpectrum": {
+          "urlKey": "magen-spectrum",
+          "courseName": "מסלול מגן ספקטרום",
+          "courseImage": "/devops/devops_image.jpg",
+          "id": 5
         }
       }
     }
   ],
-  "footer": [
-    {
-      "text": "bsmch.alpha",
-      "className": "instagram-url",
-      "action": "link",
-      "actionValue": "https://instagram.com/bsmch.alpha?igshid=YmMyMTA2M2Y=",
-      "id": 0
-    },
-    {
-      "text": "972501234567+",
-      "className": "phone-url",
-      "actionValue": "+972501234567",
-      "action": "phone",
-      "id": 1
-    }
-  ]
+  "footer": {
+    "text": "בהצלחה! >> למידע נוסף זמינים בעבורך ניתן לתקשר בדרכים הבאות:",
+    "contacts": [
+      {
+        "text": "bsmch.alpha",
+        "className": "instagram-url",
+        "action": "link",
+        "actionValue": "https://instagram.com/bsmch.alpha?igshid=YmMyMTA2M2Y=",
+        "id": 0
+      },
+      {
+        "text": "*3808",
+        "className": "phone-url",
+        "actionValue": "*3808",
+        "action": "phone",
+        "id": 1
+      },
+      {
+        "text": "972529273540+",
+        "className": "whatsapp-url",
+        "actionValue": "https://api.whatsapp.com/send?phone=+972529273540",
+        "action": "link",
+        "id": 2
+      }
+    ]
+  }
 }
