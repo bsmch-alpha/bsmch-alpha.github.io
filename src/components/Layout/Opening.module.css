@@ -115,6 +115,7 @@
     margin-top: 0px;
     text-align: right;
   }
+  .welcomeSection{width: 50vw;}
 
   .logo {
     background-size: contain;
@@ -142,6 +143,7 @@
     background-size: 1350px;
     background-position-y: 47%;
   }
+  .welcomeSection{width: 45vw;}
 
   .header {
     text-align: right;
