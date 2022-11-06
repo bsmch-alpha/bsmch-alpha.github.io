@@ -47,16 +47,23 @@
         "mapal": {
           "urlKey": "mapal",
           "courseName": "מסלול מפתח לומדה",
-          "courseImage": "/devops/devops_image.jpg",
+          "courseImage": "/mapal/mapal.jpg",
           "text": "מפתח הלומדה משובץ ביחידות פיתוח הדרכה בכלל הזרועות בצה\"ל, ואחראי על פיתוח תוצרי הדרכה מתוקשבים.",
           "id": 2
         },
         "dataAnalyst": {
           "urlKey": "data-analyst",
           "courseName": "מסלול Data Analyst",
-          "courseImage": "/QA/QA_image.jpg",
+          "courseImage": "/data/data.jpg",
           "text": "הData Analyst אחראי לעבד ולחקור את מקורות המידע של צה\"ל על מנת לייצר אנליצות מתקדמות ומערכות BI ולסייע למפקדים בצה״ל לקבל החלטות מבוססות מידע.",
           "id": 3
+        },
+        "ERP": {
+          "urlKey": "erp",
+          "courseName": "מיישם ERP",
+          "courseImage": "/erp/erp.jpg",
+          "text": "המיישם הERP אחראי על מימוש תפיסת הERP בצה\"ל .תפיסת ERP היא לאחד את כל התהליכים השונים בארגון (גיוס עובדים, הזמנת פריטים, ניהול כספים וכו) לתוך מערכת אחת.",
+          "id": 4
         },
         "lahavMatzovTochna": {
           "urlKey": "lahav-matzov-tochna",
@@ -126,7 +133,7 @@
     }
   ],
   "footer": {
-    "text": "בהצלחה! >> למידע נוסף זמינים בעבורך ניתן לתקשר בדרכים הבאות:",
+    "text": "בהצלחה! >> למידע נוסף:",
     "contacts": [
       {
         "text": "bsmch.alpha",
