@@ -13,6 +13,7 @@ const GallaryCard = (props) => {
   };
 
   const onClickHandle = () => {
+    if (!props.content.text) return;
     props.onToggleModal();
     props.setCourseUrl(`${props.courseName}`);
     history.push(`/${props.courseName}`);
@@ -43,7 +44,7 @@ const GallaryCard = (props) => {
         <div className={classes["text-area"]}>
           <p className={`text ${classes.text}`}>{props.content.text}</p>
         </div>
-        <Arrow className={classes.icon} />
+        {props.content.text && <Arrow className={classes.icon} />}
       </Card>
     </div>
   );

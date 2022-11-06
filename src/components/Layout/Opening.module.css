@@ -49,6 +49,17 @@
   background-repeat: no-repeat;
 }
 
+.welcome{
+  color: var(--white);
+  font-weight: 200;
+}
+
+.welcomeSection{
+  width: 45vw;
+  margin-top: 50px;
+  text-align: right;
+}
+
 @media screen and (min-width: 650px) {
   .hero {
     background-size: 900px;
@@ -69,6 +80,7 @@
     background-size: 1100px;
     background-position-y: 42%;
   }
+  .welcomeSection{width: 60vw;}
 }
 
 @media screen and (min-width: 913px) {
@@ -83,6 +95,7 @@
   .opening-title {
     margin-top: 0px;
   }
+  .welcomeSection{width: 50vw;}
 
   .logo {
     background-size: contain;
@@ -94,6 +107,7 @@
     background-size: 1350px;
     background-position-y: 47%;
   }
+  .welcomeSection{width: 45vw;}
 
   .header {
     text-align: right;
