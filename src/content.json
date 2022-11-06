@@ -152,7 +152,7 @@
       {
         "text": "972529273540+",
         "className": "whatsapp-url",
-        "actionValue": "https://api.whatsapp.com/send?phone=+972529273540",
+        "actionValue": "https://wa.me/+972529273540",
         "action": "link",
         "id": 2
       }
