@@ -23,6 +23,7 @@
 .text {
   color: var(--white);
   font-weight: 200;
+  margin-right: 60px;
 }
 
 .instagram-url {

@@ -55,7 +55,6 @@
 }
 
 .welcomeSection{
-  width: 45vw;
   margin-top: 50px;
   text-align: right;
 }
@@ -73,6 +72,7 @@
     background-position-x: 200%;
     background-size: cover;
   }
+  .welcomeSection{width: 80vw;}
 }
 
 @media screen and (min-width: 850px) {
@@ -80,7 +80,6 @@
     background-size: 1100px;
     background-position-y: 42%;
   }
-  .welcomeSection{width: 60vw;}
 }
 
 @media screen and (min-width: 913px) {
