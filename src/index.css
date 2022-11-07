@@ -19,6 +19,8 @@
   --yellow-gradient: linear-gradient(90deg, rgba(255, 226, 116, 1) 0%, rgba(239, 160, 124, 1) 100%);
   --blue-gradient: linear-gradient(90deg, rgba(29, 217, 255, 0.67) 0%, rgba(65, 197, 248, 0.5762) 30.21%, rgba(0, 117, 255, 0.3082) 100%);
   --white-space: 1.5rem;
+  --text-size: 1.1rem;
+  --text-line-height: 1.5rem;
 }
 
 html {
@@ -71,7 +73,7 @@ body {
 }
 
 .subTitle {
-  color: var(--text-color);
+  color: var(--white);
   font-weight: 200;
   letter-spacing: 0.24rem;
   /* margin-block: 0.5rem; */
