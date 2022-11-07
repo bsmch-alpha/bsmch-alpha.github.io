@@ -89,6 +89,13 @@
   }
 }
 
+/* @media screen and (max-height: 750px) {
+  .hero {
+    background-size: 450px;
+    background-position-y: 30%;
+  }
+} */
+
 @media screen and (min-width: 650px) {
   .header {
     margin-bottom: 540px;
@@ -104,7 +111,9 @@
     max-width: 850px;
     width: 90vw;
   }
-  .welcomeSection{width: 80vw;}
+  .welcomeSection {
+    width: 80vw;
+  }
 }
 
 @media screen and (min-width: 850px) {
@@ -116,7 +125,9 @@
     margin-top: 0px;
     text-align: right;
   }
-  .welcomeSection{width: 50vw;}
+  .welcomeSection {
+    width: 50vw;
+  }
 
   .logo {
     background-size: contain;
@@ -144,7 +155,9 @@
     background-size: 1350px;
     background-position-y: 47%;
   }
-  .welcomeSection{width: 45vw;}
+  .welcomeSection {
+    width: 45vw;
+  }
 
   .header {
     text-align: right;
