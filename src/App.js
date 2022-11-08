@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Opening from "./components/Layout/Opening";
 import content from "./content.json";
 import "./App.css";
