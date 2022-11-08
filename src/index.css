@@ -73,7 +73,7 @@ body {
 }
 
 .subTitle {
-  color: var(--white);
+  color: var(--text-color);
   font-weight: 200;
   letter-spacing: 0.12rem;
   /* margin-block: 0.5rem; */

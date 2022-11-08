@@ -112,7 +112,10 @@
     width: 90vw;
   }
   .welcomeSection {
-    width: 80vw;
+    align-self: center;
+    justify-content: center;
+    max-width: 850px;
+    width: 90vw;
   }
 }
 
@@ -154,9 +157,6 @@
   .hero {
     background-size: 1350px;
     background-position-y: 47%;
-  }
-  .welcomeSection {
-    width: 45vw;
   }
 
   .header {
