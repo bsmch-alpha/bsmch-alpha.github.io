@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Opening from "./components/Layout/Opening";
 import content from "./content.json";
 import "./App.css";
@@ -8,16 +8,25 @@ import Footer from "./components/Layout/footer/Footer";
 import Modal from "./components/UI/Modal";
 import CoursesFullContent from "./components/Layout/courses-expanded/CoursesFullContent";
 import Info from "./pages/Info";
-import { Link, Redirect, Route, Switch, useLocation } from "react-router-dom";
+import {
+  Link,
+  Redirect,
+  Route,
+  Switch,
+  useHistory,
+  useLocation,
+  useRouteMatch,
+} from "react-router-dom";
 
 const App = () => {
   const location = useLocation();
   const [courseUrl, setCourseUrl] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(null);
+  const { pathname } = location;
 
   useEffect(() => {
-    const newUrl = Array(...location.pathname)
-      .filter((letter, index) => index > 0 && letter !== '/')
+    const newUrl = Array(...pathname)
+      .filter((letter, index) => index > 0 && letter !== "/")
       .join("");
 
     if (newUrl !== "") {
@@ -27,7 +36,7 @@ const App = () => {
       setIsModalOpen(false);
       setCourseUrl("");
     }
-  }, []);
+  }, [pathname]);
 
   const modalToFalse = () => {
     setIsModalOpen(false);
