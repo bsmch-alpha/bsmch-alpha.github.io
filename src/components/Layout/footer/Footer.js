@@ -33,7 +33,7 @@ const Footer = (props) => {
 
   return (
     <footer className={classes.footer}>
-      <h3 className={classes.text}>{text}</h3>
+      <h3 className="cartTitle">{text}</h3>
       <div className={classes["social-container"]}>{contactElements}</div>
       <div className={classes["stars-1"]}></div>
     </footer>
