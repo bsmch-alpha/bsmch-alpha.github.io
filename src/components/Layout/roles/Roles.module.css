@@ -80,7 +80,7 @@
   z-index: 0;
 }
 
-@media screen and (min-width: 913px) {
+@media screen and (min-width: 850px) {
   .roles-container {
     margin-top: 80px;
   }

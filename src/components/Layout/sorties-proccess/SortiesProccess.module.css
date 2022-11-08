@@ -11,7 +11,7 @@
   right: 50%;
   transform: translateX(50%);
   top: -10px;
-  background-image: url('../../../assests/SVG/stars.svg');
+  background-image: url("../../../assests/SVG/stars.svg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 170px;
@@ -20,15 +20,11 @@
 }
 
 .sortiesCard {
-  /* background-color: var(--black); */
   border-bottom: 1px solid var(--border-color);
-  border-top: 1px solid var(--border-color);
-  /* border-radius: 6px; */
-  /* margin-block: 6px; */
   z-index: 5;
 }
 
-@media screen and (min-width: 913px) {
+@media screen and (min-width: 850px) {
   .sortiesCard {
     width: fit-content;
     max-width: 600px;

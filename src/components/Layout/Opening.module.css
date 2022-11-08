@@ -3,21 +3,20 @@
   display: flex;
   flex-direction: column;
   height: 650px;
-  min-height: 500px;
   overflow: visible;
+  text-align: center;
 }
 
 .header {
   position: relative;
   display: flex;
   flex-direction: column;
-  text-align: center;
-  margin-inline: auto;
+  /* margin-inline: auto; */
   z-index: 1;
 }
 
 .header > * {
-  align-self: center;
+  /* align-self: center; */
   margin-inline: var(--white-space);
   /* max-width: 250px; */
 }
@@ -28,8 +27,7 @@
   width: 70px;
   height: 70px;
   align-self: center;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  margin-top: 10px;
   background-image: url("../../assests/logo.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -58,67 +56,65 @@
   color: var(--white);
   font-size: var(--text-size);
   font-weight: 200;
-  line-height: var(--text-line-height);
+  line-height: 1.7rem;
 }
 
 .welcomeSection {
   grid-row: 3;
-  text-align: center;
   position: relative;
+  align-self: center;
+  justify-self: end;
   margin-top: auto;
+  max-width: 600px;
   padding-inline: var(--white-space);
 }
 
-/* @media screen and (max-height: 750px) {
-  .hero {
-    background-size: 450px;
-    background-position-y: 30%;
-  }
-} */
-
 @media screen and (min-width: 650px) {
+  .opening-container {
+    height: 800px;
+  }
+
   .hero {
     background-size: 900px;
     background-position-y: 40%;
-  }
-
-  .logo {
-    position: relative;
-    width: 70px;
-    /* height: x; */
-    background-position-x: 200%;
-    background-size: cover;
+    height: 750px;
   }
   .welcomeSection {
-    width: 80vw;
+    align-self: center;
+    justify-content: center;
+    max-width: 850px;
+    width: 90vw;
   }
 }
 
 @media screen and (min-width: 850px) {
-  .hero {
-    background-size: 1100px;
-    background-position-y: 42%;
-  }
-}
-
-@media screen and (min-width: 913px) {
-  .hero {
-    background-size: 1000px;
-    background-position-y: 40%;
-  }
-
   .header {
     text-align: right;
   }
   .opening-title {
     margin-top: 0px;
-  }
-  .welcomeSection {
-    width: 50vw;
+    text-align: right;
   }
 
   .logo {
     background-size: contain;
+    position: relative;
+    width: 70px;
+    height: x;
+    background-position-x: 200%;
+    background-size: cover;
+    align-self: flex-start;
+  }
+
+  .welcomeSection {
+    align-self: flex-start;
+    max-width: 600px;
+    width: 60vw;
+  }
+
+  .opening-container {
+    height: 320px;
+    text-align: right;
   }
 }
 
@@ -126,9 +122,6 @@
   .hero {
     background-size: 1350px;
     background-position-y: 47%;
-  }
-  .welcomeSection {
-    width: 45vw;
   }
 
   .header {

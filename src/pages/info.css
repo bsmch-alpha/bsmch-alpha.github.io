@@ -18,18 +18,12 @@
 
 @media screen and (min-width: 650px) {
   .info-page {
-    grid-template-rows: 500px auto auto;
+    grid-template-rows: auto auto auto;
   }
 }
 
 @media screen and (min-width: 850px) {
   .info-page {
-    grid-template-rows: 500px auto auto;
-  }
-}
-
-@media screen and (min-width: 913px) {
-  .info-page {
-    grid-template-rows: 370px auto auto;
+    grid-template-rows: auto auto auto;
   }
 }
