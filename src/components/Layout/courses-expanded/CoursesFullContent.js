@@ -4,23 +4,20 @@ import Arrow from "../../SVG/Arrow";
 import GallaryCard from "../../UI/GallaryCard";
 import classes from "./CoursesFullContent.module.css";
 import CoursesFullGallary from "./CoursesFullGallary";
-import { useHistory, useRouteMatch } from "react-router-dom";
+import { useHistory, useParams, useRouteMatch } from "react-router-dom";
 
 const CoursesFullContent = (props) => {
   const history = useHistory();
-  const { url } = useRouteMatch();
+  const params = useParams()
 
-  const newUrl = Array(...url)
-    .filter((letter) => letter !== "/")
-    .join("");
-
+  const newUrl = params.courseId
 
   const content = Object.keys(coursesContent).map((courseName) => {
     const element = coursesContent[courseName];
     if (element.urlKey === props.courseUrl) {
       return element;
     }
-  }).filter(element => element !== undefined)[0]
+  }).find(element => element !== undefined)
 
   const liElements =
     content &&
@@ -54,7 +51,7 @@ const CoursesFullContent = (props) => {
             </div>
             <ul className={`text ${classes["about-role"]}`}>{liElements}</ul>
           </article>
-          <CoursesFullGallary selecetedCourse={newUrl} content={content} />
+          <CoursesFullGallary content={content} />
         </>
       )}
       <span
