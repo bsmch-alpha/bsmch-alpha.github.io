@@ -22,6 +22,7 @@
 
 .gallary-image--container {
   overflow: hidden;
+  height: 200px;
 }
 
 .gallary-image {
@@ -34,6 +35,7 @@
   background-repeat: no-repeat;
   border-bottom: 1px solid var(--border-color);
 }
+
 .h3 {
   grid-row: 2;
   color: var(--card-title);
