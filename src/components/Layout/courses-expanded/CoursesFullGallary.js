@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import CourseCondition from "./CourseCondition";
 import classes from "./CoursesFullGallary.module.css";
 import coursesContent from "../../../courses-content.json";
@@ -13,15 +13,15 @@ const CoursesFullGallary = (props) => {
 
   const cards = content.map((item, index) => {
     return (
-      <>
-      {item.extraInfo &&
-      <CourseCondition
-        header={item.header}
-        imgUrl={conditionArray[index]}
-        extraInfo={item.extraInfo}
-        key={item.id}
-        />}
-        </>
+      <Fragment key={item.id}>
+        {item.extraInfo && (
+          <CourseCondition
+            header={item.header}
+            imgUrl={conditionArray[index]}
+            extraInfo={item.extraInfo}
+          />
+        )}
+      </Fragment>
     );
   });
 

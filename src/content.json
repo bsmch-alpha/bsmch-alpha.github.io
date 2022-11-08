@@ -69,13 +69,13 @@
           "urlKey": "lahav-matzov-tochna",
           "courseName": "מסלול לה\"ב מצו\"ב תוכנה",
           "courseImage": "/programming/programming_image.jpg",
-          "id": 4
+          "id": 5
         },
         "psi": {
           "urlKey": "psi",
           "courseName": "פס\"י",
           "courseImage": "/QA/QA_image.jpg",
-          "id": 5
+          "id": 6
         }
       }
     },
@@ -109,25 +109,25 @@
           "courseName": "מנהל DC",
           "courseImage": "/devops/devops_image.jpg",
           "text": "קורס המכשיר את החניכים לנהל חוות שרתים מקצה לקצה ולהוות דרג ראשוני לתפעול תקלות בתחום.",
-          "id": 2
+          "id": 3
         },
         "matas": {
           "urlKey": "mastas",
           "courseName": "מסלול מט\"ס",
           "courseImage": "/programming/programming_image.jpg",
-          "id": 3
+          "id": 4
         },
         "cyberDefenceExecuter": {
           "urlKey": "cyber-defence-executer",
           "courseName": "מסלול מיישם הגנה בסייבר",
           "courseImage": "/cyber/cyber.jpg",
-          "id": 4
+          "id": 5
         },
         "magenSpectrum": {
           "urlKey": "magen-spectrum",
           "courseName": "מסלול מגן ספקטרום",
           "courseImage": "/devops/devops_image.jpg",
-          "id": 5
+          "id": 6
         }
       }
     }

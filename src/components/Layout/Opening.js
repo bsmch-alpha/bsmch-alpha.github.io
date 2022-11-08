@@ -3,7 +3,6 @@ import classes from "./Opening.module.css";
 
 const Opening = (props) => {
   const { title, subTitle, welcome, imgUrl, logoUrl } = props.content.opening;
-  console.log(welcome);
   const splittedParagraphWelocme = welcome.split(";");
 
   return (
