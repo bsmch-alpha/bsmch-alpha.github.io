@@ -114,10 +114,10 @@
           "id": 3
         },
         "matas": {
-          "urlKey": "mastas",
+          "urlKey": "matas",
           "courseName": "מסלול מט\"ס",
           "courseImage": "/programming/programming_image.jpg",
-          "text": "",
+          "text": "אמון על פיתוח ואינטגרציה של מערכות אוטומציה והקמת פלטפורמת חסינות לטובת פיתוח מוצרי הגנה וחיזוק CI-CD בסייבר ביחידת מצו\"ב.",
           "id": 4
         },
         "cyberDefenceExecuter": {
