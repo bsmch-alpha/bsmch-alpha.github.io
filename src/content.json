@@ -137,8 +137,16 @@
         "magenSpectrum": {
           "urlKey": "magen-spectrum",
           "courseName": "מסלול מגן ספקטרום",
+<<<<<<< HEAD
           "text": "כחלק מהתפתחות הספקטרום כמימד לחימה, החייל יזהה קונפליקטים ספקטראליים וידע לשקף תמונת מצב לקבלת החלטות חשובות בשדה קרב.",
           "courseImage": "/cyber/cyber.jpg",
+||||||| parent of 5169cd6 (images changes)
+          "text":"כחלק מהתפתחות הספקטרום כמימד לחימה, החייל יזהה קונפליקטים ספקטראליים וידע לשקף תמונת מצב לקבלת החלטות חשובות בשדה קרב.",
+          "courseImage": "/devops/devops_image.jpg",
+=======
+          "text":"כחלק מהתפתחות הספקטרום כמימד לחימה, החייל יזהה קונפליקטים ספקטראליים וידע לשקף תמונת מצב לקבלת החלטות חשובות בשדה קרב.",
+          "courseImage": "/cyber/cyber.jpg",
+>>>>>>> 5169cd6 (images changes)
           "id": 6
         },
         "cyberDefenceExecuter": {
