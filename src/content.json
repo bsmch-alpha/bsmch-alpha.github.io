@@ -120,17 +120,18 @@
           "text": "אמון על פיתוח ואינטגרציה של מערכות אוטומציה והקמת פלטפורמת חסינות לטובת פיתוח מוצרי הגנה וחיזוק CI-CD בסייבר ביחידת מצו\"ב.",
           "id": 4
         },
+        "magenSpectrum": {
+          "urlKey": "magen-spectrum",
+          "courseName": "מסלול מגן ספקטרום",
+          "text":"כחלק מהתפתחות הספקטרום כמימד לחימה, החייל יזהה קונפליקטים ספקטראליים וידע לשקף תמונת מצב לקבלת החלטות חשובות בשדה קרב.",
+          "courseImage": "/devops/devops_image.jpg",
+          "id": 6
+        },
         "cyberDefenceExecuter": {
           "urlKey": "cyber-defence-executer",
           "courseName": "מסלול מיישם הגנה בסייבר",
           "courseImage": "/cyber/cyber.jpg",
           "id": 5
-        },
-        "magenSpectrum": {
-          "urlKey": "magen-spectrum",
-          "courseName": "מסלול מגן ספקטרום",
-          "courseImage": "/devops/devops_image.jpg",
-          "id": 6
         }
       }
     }
