@@ -69,12 +69,14 @@
           "urlKey": "lahav-matzov-tochna",
           "courseName": "מסלול לה\"ב מצו\"ב תוכנה",
           "courseImage": "/programming/programming_image.jpg",
+          "text": "מצו\"ב הינה היחידה הלאומית לפתרונות צופן והגנה בסייבר לגופים הביטחוניים השונים. ביחידה יוצרים מערכות נגד תקיפות סייבר באוויר, ביבשה ובים.",
           "id": 5
         },
         "psi": {
           "urlKey": "psi",
           "courseName": "פס\"י",
           "courseImage": "/QA/QA_image.jpg",
+          "text": " פיתוח ספקטוראלי יעודי. עוסקים בשילוב האלגוריתמים שנחקרו בצוותי המחקר בתהליכי עיבוד מתקדמים, באמצעות פיתוח תשתיות ו-low level",
           "id": 6
         }
       }
@@ -115,6 +117,7 @@
           "urlKey": "mastas",
           "courseName": "מסלול מט\"ס",
           "courseImage": "/programming/programming_image.jpg",
+          "text": "",
           "id": 4
         },
         "cyberDefenceExecuter": {
