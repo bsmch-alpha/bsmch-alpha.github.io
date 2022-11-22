@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Opening from "./components/Layout/Opening";
 import content from "./content.json";
 import "./App.css";
@@ -8,6 +8,7 @@ import Footer from "./components/Layout/footer/Footer";
 import Modal from "./components/UI/Modal";
 import CoursesFullContent from "./components/Layout/courses-expanded/CoursesFullContent";
 import Info from "./pages/Info";
+<<<<<<< HEAD
 import { Link, Route, Switch, useLocation } from "react-router-dom";
 import ReactGA from "react-ga";
 
@@ -17,6 +18,24 @@ if (window.location.hostname !== "localhost") {
   ReactGA.initialize(TRACKING_ID);
   ReactGA.pageview(window.location.pathname);
 }
+||||||| parent of f647447 (Adding google analytics)
+import {
+  Link,
+  Redirect,
+  Route,
+  Switch,
+  useHistory,
+  useLocation,
+  useRouteMatch,
+} from "react-router-dom";
+=======
+import { Link, Route, Switch, useLocation } from "react-router-dom";
+import ReactGA from "react-ga";
+
+const TRACKING_ID = "UA-250081981-1";
+ReactGA.initialize(TRACKING_ID)
+ReactGA.pageview(window.location.pathname);
+>>>>>>> f647447 (Adding google analytics)
 
 const App = () => {
   const location = useLocation();
