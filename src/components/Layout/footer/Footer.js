@@ -7,23 +7,39 @@ const Footer = (props) => {
   const text = props.content.footer.text;
 
   const openInstagramLink = (event, value) => {
+    event.preventDefault();
     ReactGA.event({
       category: value,
-      action: event,
-      label: "3"
-    })
+      action: 'link instagram',
+      label: "3",
+    });
+    window.open(value);
+  };
+
+  const openWhatsappChat = (event, value) => {
     event.preventDefault();
+    ReactGA.event({
+      category: value,
+      action: 'link whatsapp',
+      label: "3",
+    });
     window.open(value);
   };
 
   const callNumber = (event, value) => {
     event.preventDefault();
+    ReactGA.event({
+      category: value,
+      action: 'link phone-call',
+      label: "3",
+    });
     window.open(`tel:${value}`);
   };
 
   const chooseAction = {
     phone: callNumber,
     link: openInstagramLink,
+    whatsapp: openWhatsappChat
   };
 
   const contactElements = contacts.map((item) => (
