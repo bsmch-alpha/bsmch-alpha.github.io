@@ -2,11 +2,17 @@ import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import Card from "./Card";
 import classes from "./Modal.module.css";
+import ReactGA from "react-ga";
 
 const Modal = (props) => {
   const history = useHistory();
 
   const overlayClickHandler = () => {
+    ReactGA.event({
+      category: props.courseName,
+      action: "modal closed",
+      label: "2"
+    })
     props.modalToFalse();
   };
 

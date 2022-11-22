@@ -12,8 +12,11 @@ import { Link, Route, Switch, useLocation } from "react-router-dom";
 import ReactGA from "react-ga";
 
 const TRACKING_ID = "UA-250081981-1";
-ReactGA.initialize(TRACKING_ID)
-ReactGA.pageview(window.location.pathname);
+
+if (window.location.hostname !== "localhost") {
+  ReactGA.initialize(TRACKING_ID);
+  ReactGA.pageview(window.location.pathname);
+}
 
 const App = () => {
   const location = useLocation();
