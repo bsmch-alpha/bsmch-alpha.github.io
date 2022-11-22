@@ -5,6 +5,7 @@ import GallaryCard from "../../UI/GallaryCard";
 import classes from "./CoursesFullContent.module.css";
 import CoursesFullGallary from "./CoursesFullGallary";
 import { useHistory, useParams, useRouteMatch } from "react-router-dom";
+import ReactGA from "react-ga";
 
 const CoursesFullContent = (props) => {
   const history = useHistory();
@@ -24,6 +25,11 @@ const CoursesFullContent = (props) => {
     content.aboutRole.map((item) => <li key={item.id}>{item.text}</li>);
 
   const exitModalClickHandler = () => {
+    ReactGA.event({
+      category: props.courseName,
+      action: "modal closed",
+      label: "2"
+    })
     props.modalToFalse();
   };
 

@@ -1,11 +1,17 @@
 import React from "react";
 import classes from "./Footer.module.css";
+import ReactGA from "react-ga";
 
 const Footer = (props) => {
   const contacts = props.content.footer.contacts;
   const text = props.content.footer.text;
 
   const openInstagramLink = (event, value) => {
+    ReactGA.event({
+      category: value,
+      action: event,
+      label: "3"
+    })
     event.preventDefault();
     window.open(value);
   };
