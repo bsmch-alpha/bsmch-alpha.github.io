@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useHistory, useRouteMatch } from "react-router-dom";
 import Arrow from "../SVG/Arrow";
 import Card from "./Card";
 import classes from "./GallaryCard.module.css";
+import ReactGA from "react-ga";
 
 const GallaryCard = (props) => {
   const { path } = useRouteMatch();
@@ -16,6 +17,11 @@ const GallaryCard = (props) => {
     if (!props.content.text) return;
     props.onToggleModal();
     props.setCourseUrl(`${props.courseName}`);
+    ReactGA.event({
+      category: props.courseName,
+      action: "modal opened",
+      label: "1"
+    })
     history.push(`/${props.courseName}`);
   };
 
