@@ -75,7 +75,7 @@ body {
 .subTitle {
   color: var(--text-color);
   font-weight: 200;
-  letter-spacing: 0.24rem;
+  letter-spacing: 0.12rem;
   /* margin-block: 0.5rem; */
   line-height: 2rem;
   word-break: break-word;
@@ -124,7 +124,7 @@ body {
 
 @media screen and (min-width: 850px) {
   .title {
-    font-size: 3.2rem;
+    font-size: 3.8rem;
     font-weight: 700;
     color: var(--white);
     word-break: break-word;
@@ -132,7 +132,7 @@ body {
 
   .subTitle {
     font-weight: 200;
-    letter-spacing: 0.4rem;
+    letter-spacing: 0.12rem;
     font-size: 1.5rem;
     line-height: 2.4rem;
   }
