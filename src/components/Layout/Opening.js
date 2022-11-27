@@ -2,6 +2,7 @@ import React from "react";
 import dispatchLink from "../../actions/actions";
 import SocialLink from "../UI/SocialLink";
 import classes from "./Opening.module.css";
+import instagramIcon from "../../assests/instagram_icon.png";
 
 const Opening = (props) => {
   const { title, subTitle, welcome, socialLinks } = props.content.opening;
