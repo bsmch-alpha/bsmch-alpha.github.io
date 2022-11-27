@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../UI/Button";
 import classes from "./Opening.module.css";
 
 const Opening = (props) => {
@@ -15,6 +16,9 @@ const Opening = (props) => {
       <figure className={classes.figure}>
         <div className={classes.hero}></div>
       </figure>
+      <div className={classes['social-links']}>
+        <Button />
+      </div>
       <div className={classes.welcomeSection}>
         <p className={classes.welcome}>{splittedParagraphWelocme[0]}</p>
         {/* <h2 className={classes.welcome}>{splittedParagraphWelocme[1]}</h2> */}
