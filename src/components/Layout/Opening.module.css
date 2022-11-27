@@ -53,9 +53,15 @@
 }
 
 .social-links {
-  margin-top: auto;
+  margin-top: 1.5rem;
   padding-inline: var(--white-space);
   margin-bottom: 1.5rem;
+}
+
+.links-flex {
+  display: flex;
+  width: fit-content;
+  gap: 1rem;
 }
 
 .welcome {
@@ -118,7 +124,6 @@
   }
 
   .opening-container {
-    height: 320px;
     text-align: right;
   }
 }

@@ -1,6 +1,7 @@
 import React from "react";
-import Button from "../UI/Button";
+import SocialLink from "../UI/Button";
 import classes from "./Opening.module.css";
+import instagramIcon from "../../assests/instagram_icon.png";
 
 const Opening = (props) => {
   const { title, subTitle, welcome, imgUrl, logoUrl } = props.content.opening;
@@ -16,8 +17,12 @@ const Opening = (props) => {
       <figure className={classes.figure}>
         <div className={classes.hero}></div>
       </figure>
-      <div className={classes['social-links']}>
-        <Button />
+      <div className={classes["social-links"]}>
+        <p className="text-white">bsmch.alpha</p>
+        <div className={classes['links-flex']}>
+          <SocialLink icon={instagramIcon} />
+          <SocialLink icon={instagramIcon} />
+        </div>
       </div>
       <div className={classes.welcomeSection}>
         <p className={classes.welcome}>{splittedParagraphWelocme[0]}</p>
