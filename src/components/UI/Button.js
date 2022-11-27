@@ -1,12 +1,8 @@
-import React from 'react';
-import classes from "./Button.module.css"
+import React from "react";
+import classes from "./Button.module.css";
 
-const Button = () => {
-  return (
-    <button className={classes.btn}>
-      <span></span><span>bsmch.alpha</span>
-    </button>
-  );
+const SocialLink = (props) => {
+  return <button className={classes.btn} style={{backgroundImage: `url('${props.icon}')`}}></button>;
 };
 
-export default Button;
+export default SocialLink;

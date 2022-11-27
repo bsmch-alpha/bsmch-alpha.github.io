@@ -120,6 +120,15 @@ body {
   word-break: break-word;
   text-overflow:ellipsis;
 }
+.text-white {
+  padding-bottom: 0.6rem;
+  font-size: 1.1rem;
+  line-height: 1.5em;
+  font-weight: 200;
+  color: var(--white);
+  word-break: break-word;
+  text-overflow:ellipsis;
+}
 
 
 @media screen and (min-width: 850px) {
