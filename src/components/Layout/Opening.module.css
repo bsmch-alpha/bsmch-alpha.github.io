@@ -2,7 +2,6 @@
   height: fit-content;
   display: flex;
   flex-direction: column;
-  height: 650px;
   overflow: visible;
   text-align: center;
 }
@@ -13,6 +12,7 @@
   flex-direction: column;
   /* margin-inline: auto; */
   z-index: 1;
+  margin-bottom: 380px;
 }
 
 .header > * {
@@ -52,6 +52,12 @@
   background-repeat: no-repeat;
 }
 
+.social-links {
+  margin-top: auto;
+  padding-inline: var(--white-space);
+  margin-bottom: 1.5rem;
+}
+
 .welcome {
   color: var(--white);
   font-size: var(--text-size);
@@ -64,16 +70,14 @@
   position: relative;
   align-self: center;
   justify-self: end;
-  margin-top: auto;
   max-width: 600px;
   padding-inline: var(--white-space);
 }
 
 @media screen and (min-width: 650px) {
-  .opening-container {
-    height: 800px;
+  .header {
+    margin-bottom: 540px;
   }
-
   .hero {
     background-size: 900px;
     background-position-y: 40%;
@@ -90,6 +94,7 @@
 @media screen and (min-width: 850px) {
   .header {
     text-align: right;
+    margin-bottom: 0px;
   }
   .opening-title {
     margin-top: 0px;
