@@ -1,4 +1,5 @@
 import React from "react";
+import dispatchLink from "../../actions/actions";
 import SocialLink from "../UI/SocialLink";
 import classes from "./Opening.module.css";
 
@@ -7,7 +8,16 @@ const Opening = (props) => {
   const splittedParagraphWelocme = welcome.split(";");
 
   const socialLinksElement = socialLinks.map((item) => (
-    <SocialLink key={item.id} icon={item.iconLink} />
+    <SocialLink
+      key={item.id}
+      icon={item.iconLink}
+      onClick={(event) =>
+        dispatchLink(item.action, {
+          event,
+          value: item.actionValue,
+        })
+      }
+    />
   ));
 
   return (
@@ -21,7 +31,7 @@ const Opening = (props) => {
         <div className={classes.hero}></div>
       </figure>
       <div className={classes["social-links"]}>
-        <p className="text-white">bsmch.alpha</p>
+        <p className="text-white">bsmch.alpha@</p>
         <div className={classes["links-flex"]}>{socialLinksElement}</div>
       </div>
       <div className={classes.welcomeSection}>
