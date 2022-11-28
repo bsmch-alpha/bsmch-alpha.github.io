@@ -147,14 +147,14 @@
       {
         "text": "bsmch.alpha",
         "className": "instagram-url",
-        "action": "link",
+        "action": "instagram",
         "actionValue": "https://instagram.com/bsmch.alpha?igshid=YmMyMTA2M2Y=",
         "id": 0
       },
       {
         "text": "*3808",
         "className": "phone-url",
-        "actionValue": "*3808",
+        "actionValue": "tel:*3808",
         "action": "phone",
         "id": 1
       },

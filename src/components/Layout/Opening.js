@@ -6,7 +6,6 @@ const Opening = (props) => {
   const { title, subTitle, welcome, socialLinks } = props.content.opening;
   const splittedParagraphWelocme = welcome.split(";");
 
-  console.log(socialLinks);
   const socialLinksElement = socialLinks.map((item) => (
     <SocialLink key={item.id} icon={item.iconLink} />
   ));
