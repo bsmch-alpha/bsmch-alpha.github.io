@@ -31,7 +31,7 @@ const Opening = (props) => {
         <div className={classes.hero}></div>
       </figure>
       <div className={classes["social-links"]}>
-        <p className="text-white">bsmch.alpha@</p>
+        <p className="text-no-padding">bsmch.alpha@ - כדי להישאר הכי מעודכנים</p>
         <div className={classes["links-flex"]}>{socialLinksElement}</div>
       </div>
       <div className={classes.welcomeSection}>

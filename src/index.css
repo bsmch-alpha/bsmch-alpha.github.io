@@ -73,7 +73,7 @@ body {
 }
 
 .subTitle {
-  color: var(--text-color);
+  color: var(--white);
   font-weight: 200;
   letter-spacing: 0.12rem;
   /* margin-block: 0.5rem; */
@@ -112,6 +112,17 @@ body {
 
 .text {
   padding-inline: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.5em;
+  font-weight: 200;
+  color: var(--text-color);
+  word-break: break-word;
+  text-overflow:ellipsis;
+}
+
+.text-no-padding {
+  /* padding-inline: 1rem; */
   padding-bottom: 1rem;
   font-size: 1.1rem;
   line-height: 1.5em;
