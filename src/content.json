@@ -156,9 +156,9 @@
     "contacts": [
       {
         "text": "bsmch.alpha",
-        "className": "instagram-url",
-        "action": "instagram",
-        "actionValue": "https://instagram.com/bsmch.alpha?igshid=YmMyMTA2M2Y=",
+        "className": "facebook-url",
+        "action": "facebook",
+        "actionValue": "https://www.facebook.com/profile.php?id=100088136769995&mibextid=LQQJ4d",
         "id": 0
       },
       {

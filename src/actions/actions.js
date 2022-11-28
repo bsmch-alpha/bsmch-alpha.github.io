@@ -14,6 +14,9 @@ const actions = {
   instagram: (args) => {
     defaultActions(args, "link instagram")
   },
+  facebook: (args) => {
+    defaultActions(args, "link facebook")
+  },
   tiktok: (args) => {
     defaultActions(args, "link tiktok")
   },
