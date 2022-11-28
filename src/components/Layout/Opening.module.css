@@ -12,7 +12,7 @@
   flex-direction: column;
   /* margin-inline: auto; */
   z-index: 1;
-  margin-bottom: 380px;
+  margin-bottom: 340px;
 }
 
 .header > * {
@@ -59,9 +59,12 @@
 }
 
 .links-flex {
-  display: flex;
-  width: fit-content;
+  display: inline-block;
   gap: 1rem;
+}
+
+.links-flex > *:not(:last-child) {
+  margin-left: 1rem;
 }
 
 .welcome {
@@ -78,6 +81,12 @@
   justify-self: end;
   max-width: 600px;
   padding-inline: var(--white-space);
+}
+
+@media screen and (max-width: 300px) {
+  .header {
+    margin-bottom: 300px;
+  }
 }
 
 @media screen and (min-width: 650px) {
