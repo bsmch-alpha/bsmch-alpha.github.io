@@ -14,7 +14,7 @@ const Footer = (props) => {
           dispatchLink(item.action, {
             event,
             value: item.actionValue,
-          }) /*chooseAction[item.action](event, item.actionValue)*/
+          })
       }
       className={classes["contact-continaer"]}
       key={item.id}

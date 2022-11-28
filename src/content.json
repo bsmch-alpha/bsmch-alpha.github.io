@@ -3,8 +3,18 @@
     "title": "מסלול אלפא",
     "subTitle": "מיון לאגף התקשוב וההגנה בסייבר",
     "socialLinks": [
-      { "iconLink": "/socialLinks/instagram_icon.png", "id": 0 },
-      { "iconLink": "/socialLinks/tiktok_icon.png", "id": 1 }
+      {
+        "actionValue": "https://instagram.com/bsmch.alpha?igshid=YmMyMTA2M2Y=",
+        "action": "instagram",
+        "iconLink": "/socialLinks/instagram_icon.png",
+        "id": 0
+      },
+      {
+        "actionValue": "https://www.tiktok.com/@bsmch.alpha?_t=8Xj8E5MvzEn&_r=1",
+        "action": "tiktok",
+        "iconLink": "/socialLinks/tiktok_icon.png",
+        "id": 1
+      }
     ],
     "welcome": "אנו שמחים להודיעך כי בימים הקרובים תקבל/י זימון מקוון למיון מסלול אלפא באגף התקשוב וההגנה בסייבר. להלן פירוט על הליך המיון והמקצועות במסלול: ",
     "imgUrl": "./figure.png"

@@ -5,6 +5,7 @@ const SocialLink = (props) => {
   return (
     <button
       className={classes.btn}
+      onClick={props.onClick}
       style={{ backgroundImage: `url('${process.env.PUBLIC_URL + props.icon}')` }}
     ></button>
   );
