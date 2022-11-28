@@ -1,11 +1,15 @@
 import React from "react";
-import SocialLink from "../UI/Button";
+import SocialLink from "../UI/SocialLink";
 import classes from "./Opening.module.css";
-import instagramIcon from "../../assests/instagram_icon.png";
 
 const Opening = (props) => {
-  const { title, subTitle, welcome, imgUrl, logoUrl } = props.content.opening;
+  const { title, subTitle, welcome, socialLinks } = props.content.opening;
   const splittedParagraphWelocme = welcome.split(";");
+
+  console.log(socialLinks);
+  const socialLinksElement = socialLinks.map((item) => (
+    <SocialLink key={item.id} icon={item.iconLink} />
+  ));
 
   return (
     <div className={classes["opening-container"]}>
@@ -19,10 +23,7 @@ const Opening = (props) => {
       </figure>
       <div className={classes["social-links"]}>
         <p className="text-white">bsmch.alpha</p>
-        <div className={classes['links-flex']}>
-          <SocialLink icon={instagramIcon} />
-          <SocialLink icon={instagramIcon} />
-        </div>
+        <div className={classes["links-flex"]}>{socialLinksElement}</div>
       </div>
       <div className={classes.welcomeSection}>
         <p className={classes.welcome}>{splittedParagraphWelocme[0]}</p>
