@@ -6,19 +6,22 @@ import classes from "./CoursesFullContent.module.css";
 import CoursesFullGallary from "./CoursesFullGallary";
 import { useHistory, useParams, useRouteMatch } from "react-router-dom";
 import ReactGA from "react-ga";
+import Card from "../../UI/Card";
 
 const CoursesFullContent = (props) => {
   const history = useHistory();
-  const params = useParams()
+  const params = useParams();
 
-  const newUrl = params.courseId
+  const newUrl = params.courseId;
 
-  const content = Object.keys(coursesContent).map((courseName) => {
-    const element = coursesContent[courseName];
-    if (element.urlKey === props.courseUrl) {
-      return element;
-    }
-  }).find(element => element !== undefined)
+  const content = Object.keys(coursesContent)
+    .map((courseName) => {
+      const element = coursesContent[courseName];
+      if (element.urlKey === props.courseUrl) {
+        return element;
+      }
+    })
+    .find((element) => element !== undefined);
 
   const liElements =
     content &&
@@ -28,8 +31,8 @@ const CoursesFullContent = (props) => {
     ReactGA.event({
       category: props.courseName,
       action: "modal closed",
-      label: "2"
-    })
+      label: "2",
+    });
     props.modalToFalse();
   };
 
@@ -42,43 +45,33 @@ const CoursesFullContent = (props) => {
   }, [props.isModalOpen]);
 
   return (
-    <article className={classes["article-container"]}>
-      {content && (
-        <>
-          {/* <iframe
-            className={classes["article-image"]}
-            src={content.videoUrl}
-            loading="lazy"
-          ></iframe> */}
-          <article>
-            <div className={classes["brief"]}>
-              <h3 className="sectionTitle">{content.title}</h3>
-              <p className="text">{content.brief}</p>
-            </div>
-            <ul className={`text ${classes["about-role"]}`}>{liElements}</ul>
-          </article>
-          <CoursesFullGallary content={content} />
-        </>
-      )}
-      <span
-        className={classes["close-btn"]}
-        onClick={exitModalClickHandler}
-      ></span>
-      {!content && (
-        <>
-          <h1 className="cartTitle">
-            מצטערים, לא הצלחנו למצוא את מה שאתם מחפשים.
-          </h1>
-          {/* <h3 className="cartTitle">אבל הנה שיר  שיררגיע אתכם: </h3>
-          <iframe
-            className={classes["article-image"]}
-            src="https://www.youtube.com/embed/tgbNymZ7vqY"
-            loading="lazy"
-          ></iframe>
-          <div></div> */}
-        </>
-      )}
-    </article>
+    <div className={classes['courses-full-content-card']} style={{ marginTop: 90, borderRadius: 20 }}>
+      <article className={classes["article-container"]}>
+        {content && (
+          <>
+            <article>
+              <div className={classes["brief"]}>
+                <h3 className="sectionTitle">{content.title}</h3>
+                <p className="text">{content.brief}</p>
+              </div>
+              <ul className={`text ${classes["about-role"]}`}>{liElements}</ul>
+            </article>
+            <CoursesFullGallary content={content} />
+          </>
+        )}
+        <span
+          className={classes["close-btn"]}
+          onClick={exitModalClickHandler}
+        ></span>
+        {!content && (
+          <>
+            <h1 className="cartTitle">
+              מצטערים, לא הצלחנו למצוא את מה שאתם מחפשים.
+            </h1>
+          </>
+        )}
+      </article>
+    </div>
   );
 };
 

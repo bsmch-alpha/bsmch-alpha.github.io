@@ -10,18 +10,16 @@ import CoursesFullContent from "./components/Layout/courses-expanded/CoursesFull
 import Info from "./pages/Info";
 import { Link, Route, Switch, useLocation } from "react-router-dom";
 import ReactGA from "react-ga";
+import CookiesValidation from "./components/Layout/cookies-validation/CookiesValidation";
+import PopupModal from "./components/UI/PopupModal";
 
-const TRACKING_ID = "UA-250081981-1";
-
-if (window.location.hostname !== "localhost") {
-  ReactGA.initialize(TRACKING_ID);
-  ReactGA.pageview(window.location.pathname);
-}
+const COKKIE_ENABLED = document.cookie;
 
 const App = () => {
   const location = useLocation();
   const [courseUrl, setCourseUrl] = useState("");
-  const [isModalOpen, setIsModalOpen] = useState(null);
+  const [isMegamaExpandedOpen, setIsMegamaExpandedOpen] = useState(null);
+  const [isCookieModalOpen, setIsCookieModalOpen] = useState(true);
   const { pathname } = location;
 
   useEffect(() => {
@@ -30,35 +28,61 @@ const App = () => {
       .join("");
 
     if (newUrl !== "") {
-      setIsModalOpen(true);
+      setIsMegamaExpandedOpen(true);
       setCourseUrl(newUrl);
     } else {
-      setIsModalOpen(false);
+      setIsMegamaExpandedOpen(false);
       setCourseUrl("");
     }
   }, [pathname]);
 
-  const modalToFalse = () => {
-    setIsModalOpen(false);
+  const megamaModalToFalse = () => {
+    setIsMegamaExpandedOpen(false);
   };
 
-  const modalToTrue = () => {
-    setIsModalOpen(true);
+  const megamaModalToTrue = () => {
+    setIsMegamaExpandedOpen(true);
+  };
+
+  const cookieModalToFalse = ({ cookiesAccepted = false }) => {
+    setIsCookieModalOpen(false);
+
+    if (window.location.hostname === "localhost") {
+      return;
+    }
+
+    if (COKKIE_ENABLED) {
+      return;
+    }
+
+    if (cookiesAccepted) {
+      const TRACKING_ID = "UA-250081981-1";
+      ReactGA.initialize(TRACKING_ID);
+      ReactGA.pageview(window.location.pathname);
+      return;
+    }
   };
 
   // console.clear();
   return (
     <div className="App overlay custom">
-      <Info isModalOpen={isModalOpen}>
+      {isCookieModalOpen && !COKKIE_ENABLED && (
+        <PopupModal isCookieModalOpen={isCookieModalOpen}>
+          <CookiesValidation
+            cookieModalToFalse={cookieModalToFalse}
+            content={content}
+          />
+        </PopupModal>
+      )}
+      <Info isModalOpen={isMegamaExpandedOpen}>
         <Route path={`/:courseId`}>
           <Modal
-            modalToFalse={modalToFalse}
-            isModalOpen={isModalOpen}
-            style={{ marginTop: 90, borderRadius: 20 }}
-            modalToTrue={modalToTrue}
+            modalToFalse={megamaModalToFalse}
+            isModalOpen={isMegamaExpandedOpen}
+            modalToTrue={megamaModalToTrue}
           >
             <CoursesFullContent
-              modalToFalse={modalToFalse}
+              modalToFalse={megamaModalToFalse}
               courseUrl={courseUrl}
             />
           </Modal>
@@ -73,7 +97,7 @@ const App = () => {
                   key={courseContent.id}
                   index={index}
                   content={courseContent}
-                  modalToTrue={modalToTrue}
+                  modalToTrue={megamaModalToTrue}
                   setCourseUrl={setCourseUrl}
                 />
               ))}

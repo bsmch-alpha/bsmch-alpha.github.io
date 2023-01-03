@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import Card from "./Card";
 import classes from "./Modal.module.css";
 import ReactGA from "react-ga";
+import Overlay from "./Overlay";
 
 const Modal = (props) => {
   const history = useHistory();
@@ -11,8 +12,8 @@ const Modal = (props) => {
     ReactGA.event({
       category: props.courseName,
       action: "modal closed",
-      label: "2"
-    })
+      label: "2",
+    });
     props.modalToFalse();
   };
 
@@ -32,13 +33,8 @@ const Modal = (props) => {
           : `${classes["modal-container-close"]}`
       }
     >
-      <div
-        className={classes["modal-overlay"]}
-        onClick={overlayClickHandler}
-      ></div>
-      <Card className={classes.card} style={props.style}>
-        {props.children}
-      </Card>
+      <Overlay onClick={overlayClickHandler} />
+      {props.children}
     </div>
   );
 };

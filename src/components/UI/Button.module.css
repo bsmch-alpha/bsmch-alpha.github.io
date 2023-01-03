@@ -1,0 +1,33 @@
+.btn-primary {
+  border: none;
+  background-color: var(--cta-color);
+  width: 132px;
+  height: 45px;
+  color: var(--dark-grey);
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-family: 'Rubik', Arial, Helvetica, sans-serif;
+  transition: all 200ms ease;
+}
+
+.btn-primary:hover {
+  cursor: pointer;
+  background-color: var(--white);
+}
+
+.btn-secondary {
+  border: none;
+  background-color: transparent;
+  width: 132px;
+  height: 45px;
+  color: var(--cta-color);
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-family: 'Rubik', Arial, Helvetica, sans-serif;
+  transition: all 200ms ease;
+}
+
+.btn-secondary:hover {
+  cursor: pointer;
+  color: var(--white);
+}

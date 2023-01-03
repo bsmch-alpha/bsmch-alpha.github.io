@@ -1,0 +1,26 @@
+.cookies-popup-container {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: fit-content;
+  z-index: 100;
+  background-color: var(--dark-grey);
+  border-top: 1px var(--grey) solid;
+  padding-inline: var(--white-space);
+  z-index: 1001;
+}
+
+.cookies-title {
+  padding-top: 1rem;
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: var(--white);
+  word-break: break-word;
+}
+
+.cookies-btns-container {
+  display: flex;
+  align-items: center;
+  margin-block: 1rem;
+}

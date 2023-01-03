@@ -1,3 +1,16 @@
+.courses-full-content-card {
+  position: relative;
+  z-index: 1002;
+  width: 100vw;
+  max-width: 900px;
+  height: fit-content;
+  background-color: var(--dark-grey);
+}
+
+.courses-full-content-card>*:not(:first-child) *:not(:last-child) {
+  padding-inline: 1rem;
+}
+
 .article-container {
   display: flex;
   flex-direction: column;
@@ -13,7 +26,7 @@
   direction: rtl;
 }
 
-.article-container > *:not(.article-image) {
+.article-container>*:not(.article-image) {
   padding: 1rem;
 }
 
