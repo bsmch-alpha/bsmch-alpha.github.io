@@ -1,7 +1,8 @@
 .btn-primary {
   border: none;
   background-color: var(--cta-color);
-  width: 132px;
+  padding-inline: 2rem;
+
   height: 45px;
   color: var(--dark-grey);
   border-radius: 6px;
@@ -18,7 +19,7 @@
 .btn-secondary {
   border: none;
   background-color: transparent;
-  width: 132px;
+  padding-inline: 2rem;
   height: 45px;
   color: var(--cta-color);
   border-radius: 6px;

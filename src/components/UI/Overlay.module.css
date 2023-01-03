@@ -7,4 +7,12 @@
   /* backdrop-filter: blur(5px); */
   cursor: pointer;
   z-index: 999;
+  opacity: 0;
+  animation: overlayFadein forwards 300ms;
+}
+
+@keyframes overlayFadein {
+  to {
+    opacity: 1;
+  }
 }
