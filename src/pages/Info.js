@@ -18,6 +18,7 @@ const Info = (props) => {
   };
 
   useEffect(() => {
+    console.log(props.isModalOpen);
     if (props.isModalOpen) {
       functionDisable();
       return;

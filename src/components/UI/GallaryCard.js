@@ -22,7 +22,7 @@ const GallaryCard = (props) => {
       action: "modal opened",
       label: "1"
     })
-    history.push(`/${props.courseName}`);
+    history.replace(`${props.courseName}`);
   };
 
   return (

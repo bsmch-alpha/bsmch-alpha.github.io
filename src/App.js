@@ -23,16 +23,12 @@ const App = () => {
   const { pathname } = location;
 
   useEffect(() => {
-    const newUrl = Array(...pathname)
-      .filter((letter, index) => index > 0 && letter !== "/")
-      .join("");
-
-    if (newUrl !== "") {
+    if (pathname !== "/") {
       setIsMegamaExpandedOpen(true);
-      setCourseUrl(newUrl);
+      setCourseUrl(pathname);
     } else {
       setIsMegamaExpandedOpen(false);
-      setCourseUrl("");
+      setCourseUrl("/");
     }
   }, [pathname]);
 

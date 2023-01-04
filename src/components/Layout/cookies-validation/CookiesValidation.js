@@ -28,8 +28,6 @@ const CookiesValidation = (props) => {
     });
   };
 
-  console.log(animatedClassName);
-
   return (
     <>
       <div className={classes[animatedClassName]}>
