@@ -14,13 +14,18 @@ import CookiesValidation from "./components/Layout/cookies-validation/CookiesVal
 import PopupModal from "./components/UI/PopupModal";
 
 const COKKIE_ENABLED = document.cookie;
+// 1 - Update to react-router-dom 6
+// 2 - Courses should be under path "/courses/:courseId"
+// 3 - Add new Route with Switch so that the website will have cookies explaintion.
+// 4 - optimize 
+// 5 - release
 
 const App = () => {
   const location = useLocation();
+  const { pathname } = location;
   const [courseUrl, setCourseUrl] = useState("");
   const [isMegamaExpandedOpen, setIsMegamaExpandedOpen] = useState(null);
   const [isCookieModalOpen, setIsCookieModalOpen] = useState(true);
-  const { pathname } = location;
 
   useEffect(() => {
     if (pathname !== "/") {
@@ -40,7 +45,7 @@ const App = () => {
     setIsMegamaExpandedOpen(true);
   };
 
-  const cookieModalToFalse = ({ cookiesAccepted = false }) => {
+  const closeCookieModal = ({ userAllowedCookies = false }) => {
     setIsCookieModalOpen(false);
 
     if (window.location.hostname === "localhost") {
@@ -51,7 +56,7 @@ const App = () => {
       return;
     }
 
-    if (cookiesAccepted) {
+    if (userAllowedCookies) {
       const TRACKING_ID = "UA-250081981-1";
       ReactGA.initialize(TRACKING_ID);
       ReactGA.pageview(window.location.pathname);
@@ -65,7 +70,7 @@ const App = () => {
       {isCookieModalOpen && !COKKIE_ENABLED && (
         <PopupModal isCookieModalOpen={isCookieModalOpen}>
           <CookiesValidation
-            cookieModalToFalse={cookieModalToFalse}
+            cookieModalToFalse={closeCookieModal}
             content={content}
           />
         </PopupModal>

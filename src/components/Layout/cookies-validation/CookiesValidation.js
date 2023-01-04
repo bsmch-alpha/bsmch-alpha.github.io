@@ -15,7 +15,7 @@ const CookiesValidation = (props) => {
   const declineCookiesHandler = () => {
     handleExitAnimation({
       exitFunc: props.cookieModalToFalse.bind(null, {
-        cookiesAccepted: false,
+        userAllowedCookies: false,
       }),
     });
   };
@@ -23,7 +23,7 @@ const CookiesValidation = (props) => {
   const approveCookiesHandler = () => {
     handleExitAnimation({
       exitFunc: props.cookieModalToFalse.bind(null, {
-        cookiesAccepted: true,
+        userAllowedCookies: true,
       }),
     });
   };
