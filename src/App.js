@@ -17,8 +17,9 @@ const COKKIE_ENABLED = document.cookie;
 // 1 - Update to react-router-dom 6
 // 2 - Courses should be under path "/courses/:courseId"
 // 3 - Add new Route with Switch so that the website will have cookies explaintion.
-// 4 - optimize 
-// 5 - release
+// 4 - Cookies modal opens with scrolling 
+// 5 - optimize 
+// 6 - release
 
 const App = () => {
   const location = useLocation();
