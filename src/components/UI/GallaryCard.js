@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
-import { useHistory, useRouteMatch } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Arrow from "../SVG/Arrow";
 import Card from "./Card";
 import classes from "./GallaryCard.module.css";
 import ReactGA from "react-ga";
 
 const GallaryCard = (props) => {
-  const { path } = useRouteMatch();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const cardImage = {
     opacity: props.content.courseImage ? 0.6 : 0.12,
@@ -22,7 +21,7 @@ const GallaryCard = (props) => {
       action: "modal opened",
       label: "1"
     })
-    history.replace(`${props.courseName}`);
+    navigate(`${props.courseName}`);
   };
 
   return (

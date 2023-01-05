@@ -8,7 +8,7 @@ import Footer from "./components/Layout/footer/Footer";
 import Modal from "./components/UI/Modal";
 import CoursesFullContent from "./components/Layout/courses-expanded/CoursesFullContent";
 import Info from "./pages/Info";
-import { Link, Route, Switch, useLocation } from "react-router-dom";
+import { Link, Outlet, Route, Routes, useLocation } from "react-router-dom";
 import ReactGA from "react-ga";
 import CookiesValidation from "./components/Layout/cookies-validation/CookiesValidation";
 import PopupModal from "./components/UI/PopupModal";
@@ -17,8 +17,8 @@ const COKKIE_ENABLED = document.cookie;
 // 1 - Update to react-router-dom 6
 // 2 - Courses should be under path "/courses/:courseId"
 // 3 - Add new Route with Switch so that the website will have cookies explaintion.
-// 4 - Cookies modal opens with scrolling 
-// 5 - optimize 
+// 4 - Cookies modal opens with scrolling
+// 5 - optimize
 // 6 - release
 
 const App = () => {
@@ -77,46 +77,59 @@ const App = () => {
         </PopupModal>
       )}
       <Info isModalOpen={isMegamaExpandedOpen}>
-        <Route path={`/:courseId`}>
-          <Modal
-            modalToFalse={megamaModalToFalse}
-            isModalOpen={isMegamaExpandedOpen}
-            modalToTrue={megamaModalToTrue}
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Outlet />
+                <Opening content={content} />
+                <main className="main-content" role="main">
+                  <SortiesProccess content={content} />
+                  {content.courses.map((courseContent, index) => (
+                    <Roles
+                      key={courseContent.id}
+                      index={index}
+                      content={courseContent}
+                      modalToTrue={megamaModalToTrue}
+                      setCourseUrl={setCourseUrl}
+                    />
+                  ))}
+                </main>
+                <Footer content={content} />
+              </>
+            }
           >
-            <CoursesFullContent
-              modalToFalse={megamaModalToFalse}
-              courseUrl={courseUrl}
-            />
-          </Modal>
-        </Route>
-        <Switch>
-          <Route path={`/`}>
-            <Opening content={content} />
-            <main className="main-content" role="main">
-              <SortiesProccess content={content} />
-              {content.courses.map((courseContent, index) => (
-                <Roles
-                  key={courseContent.id}
-                  index={index}
-                  content={courseContent}
+            <Route
+              path="*"
+              element={
+                <Modal
+                  modalToFalse={megamaModalToFalse}
+                  isModalOpen={isMegamaExpandedOpen}
                   modalToTrue={megamaModalToTrue}
-                  setCourseUrl={setCourseUrl}
-                />
-              ))}
-            </main>
-            <Footer content={content} />
+                >
+                  <CoursesFullContent
+                    modalToFalse={megamaModalToFalse}
+                    courseUrl={courseUrl}
+                  />
+                </Modal>
+              }
+            />
           </Route>
-          <Route path="*">
-            <div>
-              <h1 className="title">שגיאה 404</h1>
-              <p className="sectionTitle">
-                נראה מפחיד? אל תדאגו, אנחנו פשוט לא הצלחנו למצוא את מה שחיפתם.
-              </p>
-              <p className="text">לחצו למטה כדי להגיע למקום מבטחים: </p>
-              <Link to="">חזרה למקום מבטחים</Link>
-            </div>
-          </Route>
-        </Switch>
+          <Route
+            path="*"
+            element={
+              <div>
+                <h1 className="title">שגיאה 404</h1>
+                <p className="sectionTitle">
+                  נראה מפחיד? אל תדאגו, אנחנו פשוט לא הצלחנו למצוא את מה שחיפתם.
+                </p>
+                <p className="text">לחצו למטה כדי להגיע למקום מבטחים: </p>
+                <Link to="">חזרה למקום מבטחים</Link>
+              </div>
+            }
+          />
+        </Routes>
       </Info>
     </div>
   );

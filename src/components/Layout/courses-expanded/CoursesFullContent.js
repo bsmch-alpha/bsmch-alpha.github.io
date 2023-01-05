@@ -1,18 +1,13 @@
 import React, { useEffect } from "react";
 import coursesContent from "../../../courses-content.json";
-import Arrow from "../../SVG/Arrow";
-import GallaryCard from "../../UI/GallaryCard";
 import classes from "./CoursesFullContent.module.css";
 import CoursesFullGallary from "./CoursesFullGallary";
-import { useHistory, useParams, useRouteMatch } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ReactGA from "react-ga";
-import Card from "../../UI/Card";
 
 const CoursesFullContent = (props) => {
-  const history = useHistory();
-  const params = useParams();
-
-  const newUrl = params.courseId;
+  // const history = useHistory();
+  const navigate = useNavigate();
 
   const content = Object.keys(coursesContent)
     .map((courseName) => {
@@ -39,7 +34,8 @@ const CoursesFullContent = (props) => {
   useEffect(() => {
     if (!props.isModalOpen === false) {
       setTimeout(() => {
-        history.push("/");
+        // history.push("/");
+        navigate()
       }, 300);
     }
   }, [props.isModalOpen]);

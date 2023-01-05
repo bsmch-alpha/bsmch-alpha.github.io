@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Card from "./Card";
 import classes from "./Modal.module.css";
 import ReactGA from "react-ga";
 import Overlay from "./Overlay";
 
 const Modal = (props) => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const overlayClickHandler = () => {
     ReactGA.event({
@@ -20,7 +20,7 @@ const Modal = (props) => {
   useEffect(() => {
     if (props.isModalOpen === false) {
       setTimeout(() => {
-        history.push("/");
+        navigate("/");
       }, 300);
     }
   }, [props.isModalOpen]);
