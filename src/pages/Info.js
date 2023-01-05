@@ -7,30 +7,7 @@ import Roles from "../components/Layout/roles/Roles";
 import Footer from "../components/Layout/footer/Footer";
 
 const Info = (props) => {
-  const { content, expandCourse, isCourseExpanded } = props;
-
-  const disableScrolling = () => {
-    const TopScroll = window.pageYOffset || document.documentElement.scrollTop;
-    const LeftScroll =
-      window.pageXOffset || document.documentElement.scrollLeft;
-
-    // if scroll happens, set it to the previous value
-    window.onscroll = function () {
-      window.scrollTo(LeftScroll, TopScroll);
-    };
-  };
-
-  const enableScrolling = () => {
-    window.onscroll = () => {};
-  };
-
-  useEffect(() => {
-    if (isCourseExpanded) {
-      disableScrolling();
-    } else {
-      enableScrolling();
-    }
-  }, [isCourseExpanded]);
+  const { content } = props;
 
   return (
     <div className="info-page">
@@ -43,7 +20,6 @@ const Info = (props) => {
             key={courseContent.id}
             index={index}
             content={courseContent}
-            expandCourse={expandCourse}
           />
         ))}
       </main>

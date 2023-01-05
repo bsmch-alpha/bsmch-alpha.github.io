@@ -6,7 +6,7 @@ import classes from "./GallaryCard.module.css";
 import ReactGA from "react-ga";
 
 const GallaryCard = (props) => {
-  const { courseName, content, expandCourse } = props;
+  const { courseName, content } = props;
 
   const navigate = useNavigate();
 
@@ -14,18 +14,18 @@ const GallaryCard = (props) => {
     opacity: content.courseImage ? 0.6 : 0.12,
   };
 
-  const onClickHandle = () => {
+  const onClickHandler = () => {
     if (!content.text) return;
     ReactGA.event({
       category: courseName,
       action: "modal opened",
       label: "1",
     });
-    navigate(`courses${courseName}`);
+    navigate(`courses/${courseName}`);
   };
 
   return (
-    <div onClick={onClickHandle}>
+    <div onClick={onClickHandler}>
       <Card className={classes["gallar-card-container"]}>
         <div className={classes["gallary-image--container"]}>
           <img

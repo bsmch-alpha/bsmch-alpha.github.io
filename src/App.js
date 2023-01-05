@@ -9,7 +9,6 @@ import CookiesValidation from "./components/Layout/cookies-validation/CookiesVal
 import PopupModal from "./components/UI/PopupModal";
 import NotFound from "./pages/NotFound";
 
-// 3 - Courses should be under path "/courses/:courseId"
 // 4 - Add new Route with Switch so that the website will have cookies explaintion.
 // 5 - Cookies modal opens with scrolling
 // 6 - optimize
@@ -40,6 +39,7 @@ const App = () => {
   };
 
   // console.clear();
+
   return (
     <div className="App overlay custom">
       {isCookieModalOpen && !COKKIE_ENABLED && (
@@ -51,7 +51,7 @@ const App = () => {
         </PopupModal>
       )}
       <Routes>
-        <Route path="/*" element={<Info content={content} />}>
+        <Route path="/" element={<Info content={content} />}>
           <Route path="courses/*" element={<CoursesFullContent />} />
         </Route>
         <Route path="*" element={<NotFound />} />

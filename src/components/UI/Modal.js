@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import classes from "./Modal.module.css";
 import ReactGA from "react-ga";
 import Overlay from "./Overlay";
@@ -13,12 +13,15 @@ const Modal = (props) => {
   });
 
   const navigate = useNavigate();
+  const params = useParams();
+
+  const selectedCourseName = params[Object.keys(params)];
 
   const contractCourse = () => {
     handleExitAnimation({
       exitFunc: () => {
         ReactGA.event({
-          category: props.courseName,
+          category: selectedCourseName,
           action: "modal closed",
           label: "2",
         });
@@ -26,8 +29,6 @@ const Modal = (props) => {
       },
     });
   };
-
-  console.log(animatedClassName);
 
   return (
     <div className={classes[animatedClassName]}>
