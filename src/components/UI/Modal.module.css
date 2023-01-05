@@ -12,7 +12,7 @@
   animation: cardFadein forwards 300ms ease;
 }
 
-.modal-container-close {
+.modal-container-exiting {
   position: fixed;
   z-index: 1000;
   width: 100vw;
@@ -60,7 +60,7 @@
     animation: cardFadein forwards 300ms ease;
   }
 
-  .modal-container-close {
+  .modal-container-exiting {
     animation: cardFadeout forwards 300ms ease;
   }
 

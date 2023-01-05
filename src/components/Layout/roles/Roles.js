@@ -3,7 +3,7 @@ import GallaryCard from "../../UI/GallaryCard";
 import classes from "./Roles.module.css";
 
 const Roles = (props) => {
-  const { content, expandCourse, setCourseUrl, index } = props;
+  const { content, expandCourse, index } = props;
   const gallaryRef = useRef();
 
   const handleNextScroll = () => {
@@ -24,7 +24,6 @@ const Roles = (props) => {
     const data = content.gallary[nodeName];
     return (
       <GallaryCard
-        setCourseUrl={setCourseUrl}
         courseName={data.urlKey}
         content={data}
         key={data.id}

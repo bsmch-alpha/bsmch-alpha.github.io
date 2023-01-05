@@ -2,21 +2,22 @@ import React, { useEffect } from "react";
 import coursesContent from "../../../courses-content.json";
 import classes from "./CoursesFullContent.module.css";
 import CoursesFullGallary from "./CoursesFullGallary";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import ReactGA from "react-ga";
 import Modal from "../../UI/Modal";
 
-const CoursesFullContent = (props) => {
-  const { courseUrl, expandCourse, contractCourse, isCourseExpanded } = props;
-
-  let selectedCourseName;
-
+const CoursesFullContent = () => {
   const navigate = useNavigate();
+
+  const params = useParams();
+
+  const selectedCourseUrl = "/" + params[Object.keys(params)];
+  let selectedCourseName;
 
   const content = Object.keys(coursesContent)
     .map((courseName) => {
       const element = coursesContent[courseName];
-      if (element.urlKey === courseUrl) {
+      if (element.urlKey === selectedCourseUrl) {
         selectedCourseName = courseName;
         return element;
       }
@@ -33,22 +34,21 @@ const CoursesFullContent = (props) => {
       action: "modal closed",
       label: "2",
     });
-    contractCourse();
+    setTimeout(() => {
+      navigate("/");
+    }, 300);
   };
 
   useEffect(() => {
-    if (isCourseExpanded) {
-      setTimeout(() => {
-        navigate();
-      }, 300);
-    }
-  }, [isCourseExpanded]);
+    return () => {
+      console.log("unmounted");
+    };
+  }, []);
 
   return (
     <Modal
-      contractCourse={contractCourse}
-      isModalOpen={isCourseExpanded}
-      expandCourse={expandCourse}
+    // contractCourse={contractCourse}
+    // isModalOpen={isCourseExpanded}
     >
       <div className={classes["courses-full-content-card"]}>
         <article className={classes["article-container"]}>
@@ -66,10 +66,10 @@ const CoursesFullContent = (props) => {
               <CoursesFullGallary content={content} />
             </>
           )}
-          <span
+          {/* <span
             className={classes["close-btn"]}
             onClick={exitModalClickHandler}
-          ></span>
+          ></span> */}
           {!content && (
             <h1 className="cartTitle">
               מצטערים, לא הצלחנו למצוא את מה שאתם מחפשים.

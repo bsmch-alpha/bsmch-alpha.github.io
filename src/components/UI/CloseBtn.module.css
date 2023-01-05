@@ -1,0 +1,14 @@
+.close-btn {
+  cursor: pointer;
+  content: "";
+  position: absolute;
+  top: 20px;
+  z-index: 1000;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("../../assests/close.svg");
+  aspect-ratio: 1;
+  width: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

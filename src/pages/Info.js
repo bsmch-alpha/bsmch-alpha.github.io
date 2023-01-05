@@ -7,7 +7,7 @@ import Roles from "../components/Layout/roles/Roles";
 import Footer from "../components/Layout/footer/Footer";
 
 const Info = (props) => {
-  const { content, setCourseUrl, expandCourse, isCourseExpanded } = props;
+  const { content, expandCourse, isCourseExpanded } = props;
 
   const disableScrolling = () => {
     const TopScroll = window.pageYOffset || document.documentElement.scrollTop;
@@ -44,7 +44,6 @@ const Info = (props) => {
             index={index}
             content={courseContent}
             expandCourse={expandCourse}
-            setCourseUrl={setCourseUrl}
           />
         ))}
       </main>
