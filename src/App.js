@@ -8,25 +8,26 @@ import Footer from "./components/Layout/footer/Footer";
 import Modal from "./components/UI/Modal";
 import CoursesFullContent from "./components/Layout/courses-expanded/CoursesFullContent";
 import Info from "./pages/Info";
-import { Link, Outlet, Route, Routes, useLocation } from "react-router-dom";
+import { Link, Route, Routes, useLocation } from "react-router-dom";
 import ReactGA from "react-ga";
 import CookiesValidation from "./components/Layout/cookies-validation/CookiesValidation";
 import PopupModal from "./components/UI/PopupModal";
 
 const COKKIE_ENABLED = document.cookie;
-// 1 - Update to react-router-dom 6
-// 2 - Courses should be under path "/courses/:courseId"
-// 3 - Add new Route with Switch so that the website will have cookies explaintion.
-// 4 - Cookies modal opens with scrolling
-// 5 - optimize
-// 6 - release
+// 2 - clean code
+// 3 - Courses should be under path "/courses/:courseId"
+// 4 - Add new Route with Switch so that the website will have cookies explaintion.
+// 5 - Cookies modal opens with scrolling
+// 6 - optimize
+// 7 - release
 
 const App = () => {
+  const [courseUrl, setCourseUrl] = useState("");
+  const [isCourseExpanded, setIsMegamaExpandedOpen] = useState(null);
+  const [isCookieModalOpen, setIsCookieModalOpen] = useState(true);
+
   const location = useLocation();
   const { pathname } = location;
-  const [courseUrl, setCourseUrl] = useState("");
-  const [isMegamaExpandedOpen, setIsMegamaExpandedOpen] = useState(null);
-  const [isCookieModalOpen, setIsCookieModalOpen] = useState(true);
 
   useEffect(() => {
     if (pathname !== "/") {
@@ -42,7 +43,7 @@ const App = () => {
     setIsMegamaExpandedOpen(false);
   };
 
-  const megamaModalToTrue = () => {
+  const expandCourse = () => {
     setIsMegamaExpandedOpen(true);
   };
 
@@ -76,61 +77,48 @@ const App = () => {
           />
         </PopupModal>
       )}
-      <Info isModalOpen={isMegamaExpandedOpen}>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Outlet />
-                <Opening content={content} />
-                <main className="main-content" role="main">
-                  <SortiesProccess content={content} />
-                  {content.courses.map((courseContent, index) => (
-                    <Roles
-                      key={courseContent.id}
-                      index={index}
-                      content={courseContent}
-                      modalToTrue={megamaModalToTrue}
-                      setCourseUrl={setCourseUrl}
-                    />
-                  ))}
-                </main>
-                <Footer content={content} />
-              </>
-            }
-          >
-            <Route
-              path="*"
-              element={
-                <Modal
-                  modalToFalse={megamaModalToFalse}
-                  isModalOpen={isMegamaExpandedOpen}
-                  modalToTrue={megamaModalToTrue}
-                >
-                  <CoursesFullContent
-                    modalToFalse={megamaModalToFalse}
-                    courseUrl={courseUrl}
-                  />
-                </Modal>
-              }
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Info
+              isCourseExpanded={isCourseExpanded}
+              content={content}
+              expandCourse={expandCourse}
+              setCourseUrl={setCourseUrl}
             />
-          </Route>
+          }
+        >
           <Route
             path="*"
             element={
-              <div>
-                <h1 className="title">שגיאה 404</h1>
-                <p className="sectionTitle">
-                  נראה מפחיד? אל תדאגו, אנחנו פשוט לא הצלחנו למצוא את מה שחיפתם.
-                </p>
-                <p className="text">לחצו למטה כדי להגיע למקום מבטחים: </p>
-                <Link to="">חזרה למקום מבטחים</Link>
-              </div>
+              <Modal
+                modalToFalse={megamaModalToFalse}
+                isModalOpen={isCourseExpanded}
+                modalToTrue={expandCourse}
+              >
+                <CoursesFullContent
+                  modalToFalse={megamaModalToFalse}
+                  courseUrl={courseUrl}
+                />
+              </Modal>
             }
           />
-        </Routes>
-      </Info>
+        </Route>
+        <Route
+          path="*"
+          element={
+            <div>
+              <h1 className="title">שגיאה 404</h1>
+              <p className="sectionTitle">
+                נראה מפחיד? אל תדאגו, אנחנו פשוט לא הצלחנו למצוא את מה שחיפתם.
+              </p>
+              <p className="text">לחצו למטה כדי להגיע למקום מבטחים: </p>
+              <Link to="">חזרה למקום מבטחים</Link>
+            </div>
+          }
+        />
+      </Routes>
     </div>
   );
 };

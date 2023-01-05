@@ -6,22 +6,24 @@ import classes from "./GallaryCard.module.css";
 import ReactGA from "react-ga";
 
 const GallaryCard = (props) => {
+  const { setCourseUrl, courseName, content, expandCourse } = props;
+
   const navigate = useNavigate();
 
   const cardImage = {
-    opacity: props.content.courseImage ? 0.6 : 0.12,
+    opacity: content.courseImage ? 0.6 : 0.12,
   };
 
   const onClickHandle = () => {
-    if (!props.content.text) return;
-    props.onToggleModal();
-    props.setCourseUrl(`${props.courseName}`);
+    if (!content.text) return;
+    expandCourse();
+    setCourseUrl(`${courseName}`);
     ReactGA.event({
-      category: props.courseName,
+      category: courseName,
       action: "modal opened",
-      label: "1"
-    })
-    navigate(`${props.courseName}`);
+      label: "1",
+    });
+    navigate(`${courseName}`);
   };
 
   return (
@@ -34,8 +36,8 @@ const GallaryCard = (props) => {
             src={`${
               process.env.PUBLIC_URL +
               `${
-                props.content.courseImage
-                  ? props.content.courseImage
+                content.courseImage
+                  ? content.courseImage
                   : "./placeholderImage-3.svg"
               }`
             }`}
@@ -43,13 +45,11 @@ const GallaryCard = (props) => {
             loading="lazy"
           ></img>
         </div>
-        <h3 className={`cartTitle ${classes.h3}`}>
-          {props.content.courseName}
-        </h3>
+        <h3 className={`cartTitle ${classes.h3}`}>{content.courseName}</h3>
         <div className={classes["text-area"]}>
-          <p className={`text ${classes.text}`}>{props.content.text}</p>
+          <p className={`text ${classes.text}`}>{content.text}</p>
         </div>
-        {props.content.text && <Arrow className={classes.icon} />}
+        {content.text && <Arrow className={classes.icon} />}
       </Card>
     </div>
   );
