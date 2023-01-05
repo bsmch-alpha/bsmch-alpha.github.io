@@ -14,7 +14,7 @@ const Modal = (props) => {
       action: "modal closed",
       label: "2",
     });
-    props.modalToFalse();
+    props.contractCourse();
   };
 
   useEffect(() => {

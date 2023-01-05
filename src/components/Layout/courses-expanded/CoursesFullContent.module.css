@@ -3,6 +3,8 @@
   z-index: 1002;
   width: 100vw;
   max-width: 900px;
+  margin-top: 90px;
+  border-radius: 20px;
   height: fit-content;
   background-color: var(--dark-grey);
 }

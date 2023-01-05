@@ -4,15 +4,20 @@ import classes from "./CoursesFullContent.module.css";
 import CoursesFullGallary from "./CoursesFullGallary";
 import { useNavigate } from "react-router-dom";
 import ReactGA from "react-ga";
+import Modal from "../../UI/Modal";
 
 const CoursesFullContent = (props) => {
-  // const history = useHistory();
+  const { courseUrl, expandCourse, contractCourse, isCourseExpanded } = props;
+
+  let selectedCourseName;
+
   const navigate = useNavigate();
 
   const content = Object.keys(coursesContent)
     .map((courseName) => {
       const element = coursesContent[courseName];
-      if (element.urlKey === props.courseUrl) {
+      if (element.urlKey === courseUrl) {
+        selectedCourseName = courseName;
         return element;
       }
     })
@@ -24,50 +29,55 @@ const CoursesFullContent = (props) => {
 
   const exitModalClickHandler = () => {
     ReactGA.event({
-      category: props.courseName,
+      category: selectedCourseName,
       action: "modal closed",
       label: "2",
     });
-    props.modalToFalse();
+    contractCourse();
   };
 
   useEffect(() => {
-    if (!props.isModalOpen === false) {
+    if (isCourseExpanded) {
       setTimeout(() => {
-        // history.push("/");
-        navigate()
+        navigate();
       }, 300);
     }
-  }, [props.isModalOpen]);
+  }, [isCourseExpanded]);
 
   return (
-    <div className={classes['courses-full-content-card']} style={{ marginTop: 90, borderRadius: 20 }}>
-      <article className={classes["article-container"]}>
-        {content && (
-          <>
-            <article>
-              <div className={classes["brief"]}>
-                <h3 className="sectionTitle">{content.title}</h3>
-                <p className="text">{content.brief}</p>
-              </div>
-              <ul className={`text ${classes["about-role"]}`}>{liElements}</ul>
-            </article>
-            <CoursesFullGallary content={content} />
-          </>
-        )}
-        <span
-          className={classes["close-btn"]}
-          onClick={exitModalClickHandler}
-        ></span>
-        {!content && (
-          <>
+    <Modal
+      contractCourse={contractCourse}
+      isModalOpen={isCourseExpanded}
+      expandCourse={expandCourse}
+    >
+      <div className={classes["courses-full-content-card"]}>
+        <article className={classes["article-container"]}>
+          {content && (
+            <>
+              <article>
+                <div className={classes["brief"]}>
+                  <h3 className="sectionTitle">{content.title}</h3>
+                  <p className="text">{content.brief}</p>
+                </div>
+                <ul className={`text ${classes["about-role"]}`}>
+                  {liElements}
+                </ul>
+              </article>
+              <CoursesFullGallary content={content} />
+            </>
+          )}
+          <span
+            className={classes["close-btn"]}
+            onClick={exitModalClickHandler}
+          ></span>
+          {!content && (
             <h1 className="cartTitle">
               מצטערים, לא הצלחנו למצוא את מה שאתם מחפשים.
             </h1>
-          </>
-        )}
-      </article>
-    </div>
+          )}
+        </article>
+      </div>
+    </Modal>
   );
 };
 

@@ -11,19 +11,17 @@ const conditionArray = [condition1, condition2, condition3];
 const CoursesFullGallary = (props) => {
   const content = props.content.conditions;
 
-  const cards = content.map((item, index) => {
-    return (
-      <Fragment key={item.id}>
-        {item.extraInfo && (
-          <CourseCondition
-            header={item.header}
-            imgUrl={conditionArray[index]}
-            extraInfo={item.extraInfo}
-          />
-        )}
-      </Fragment>
-    );
-  });
+  const cards = content.map((item, index) => (
+    <Fragment key={item.id}>
+      {item.extraInfo && (
+        <CourseCondition
+          header={item.header}
+          imgUrl={conditionArray[index]}
+          extraInfo={item.extraInfo}
+        />
+      )}
+    </Fragment>
+  ));
 
   return (
     <div className={classes["option-footer"]}>

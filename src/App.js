@@ -1,20 +1,15 @@
 import React, { useEffect, useState } from "react";
-import Opening from "./components/Layout/Opening";
 import content from "./content.json";
 import "./App.css";
-import SortiesProccess from "./components/Layout/sorties-proccess/SortiesProccess";
-import Roles from "./components/Layout/roles/Roles";
-import Footer from "./components/Layout/footer/Footer";
-import Modal from "./components/UI/Modal";
 import CoursesFullContent from "./components/Layout/courses-expanded/CoursesFullContent";
 import Info from "./pages/Info";
 import { Link, Route, Routes, useLocation } from "react-router-dom";
 import ReactGA from "react-ga";
 import CookiesValidation from "./components/Layout/cookies-validation/CookiesValidation";
 import PopupModal from "./components/UI/PopupModal";
+import NotFound from "./pages/NotFound";
 
 const COKKIE_ENABLED = document.cookie;
-// 2 - clean code
 // 3 - Courses should be under path "/courses/:courseId"
 // 4 - Add new Route with Switch so that the website will have cookies explaintion.
 // 5 - Cookies modal opens with scrolling
@@ -23,7 +18,7 @@ const COKKIE_ENABLED = document.cookie;
 
 const App = () => {
   const [courseUrl, setCourseUrl] = useState("");
-  const [isCourseExpanded, setIsMegamaExpandedOpen] = useState(null);
+  const [isCourseExpanded, setIsCourseExpanded] = useState(null);
   const [isCookieModalOpen, setIsCookieModalOpen] = useState(true);
 
   const location = useLocation();
@@ -31,20 +26,20 @@ const App = () => {
 
   useEffect(() => {
     if (pathname !== "/") {
-      setIsMegamaExpandedOpen(true);
+      setIsCourseExpanded(true);
       setCourseUrl(pathname);
     } else {
-      setIsMegamaExpandedOpen(false);
+      setIsCourseExpanded(false);
       setCourseUrl("/");
     }
   }, [pathname]);
 
-  const megamaModalToFalse = () => {
-    setIsMegamaExpandedOpen(false);
+  const contractCourse = () => {
+    setIsCourseExpanded(false);
   };
 
   const expandCourse = () => {
-    setIsMegamaExpandedOpen(true);
+    setIsCourseExpanded(true);
   };
 
   const closeCookieModal = ({ userAllowedCookies = false }) => {
@@ -92,32 +87,16 @@ const App = () => {
           <Route
             path="*"
             element={
-              <Modal
-                modalToFalse={megamaModalToFalse}
-                isModalOpen={isCourseExpanded}
-                modalToTrue={expandCourse}
-              >
-                <CoursesFullContent
-                  modalToFalse={megamaModalToFalse}
-                  courseUrl={courseUrl}
-                />
-              </Modal>
+              <CoursesFullContent
+                isCourseExpanded={isCourseExpanded}
+                expandCourse={expandCourse}
+                contractCourse={contractCourse}
+                courseUrl={courseUrl}
+              />
             }
           />
         </Route>
-        <Route
-          path="*"
-          element={
-            <div>
-              <h1 className="title">שגיאה 404</h1>
-              <p className="sectionTitle">
-                נראה מפחיד? אל תדאגו, אנחנו פשוט לא הצלחנו למצוא את מה שחיפתם.
-              </p>
-              <p className="text">לחצו למטה כדי להגיע למקום מבטחים: </p>
-              <Link to="">חזרה למקום מבטחים</Link>
-            </div>
-          }
-        />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
