@@ -8,6 +8,7 @@ import ReactGA from "react-ga";
 import CookiesValidation from "./components/Layout/cookies-validation/CookiesValidation";
 import PopupModal from "./components/UI/PopupModal";
 import NotFound from "./pages/NotFound";
+import CookiesPolicies from "./pages/CookiesPolicies";
 
 // 4 - Add new Route with Switch so that the website will have cookies explaintion.
 // 5 - Cookies modal opens with scrolling
@@ -21,7 +22,6 @@ const App = () => {
 
   const closeCookieModal = ({ userAllowedCookies = false }) => {
     setIsCookieModalOpen(false);
-
     if (window.location.hostname === "localhost") {
       return;
     }
@@ -54,6 +54,7 @@ const App = () => {
         <Route path="/" element={<Info content={content} />}>
           <Route path="courses/*" element={<CoursesFullContent />} />
         </Route>
+        <Route path="about-cookies" element={<CookiesPolicies />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

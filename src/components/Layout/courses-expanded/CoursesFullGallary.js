@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import CourseCondition from "./CourseCondition";
 import classes from "./CoursesFullGallary.module.css";
-import coursesContent from "../../../courses-content.json";
 import condition1 from "../../../assests/SVG/condition-svg/condition1.svg";
 import condition2 from "../../../assests/SVG/condition-svg/condition2.svg";
 import condition3 from "../../../assests/SVG/condition-svg/condition3.svg";

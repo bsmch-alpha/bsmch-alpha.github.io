@@ -11,7 +11,7 @@ const PopupModal = (props) => {
           : `${classes["popup-container-close"]}`
       }
     >
-      <Overlay />
+      {/* <Overlay /> */}
       {props.children}
     </div>
   );

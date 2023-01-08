@@ -1,0 +1,39 @@
+.cookies-policy-container {
+  text-align: right;
+}
+
+.cookies-policy-container > section {
+  text-align: right;
+  margin-inline: auto;
+  margin-top: 10px;
+  max-width: 900px;
+  width: 100vw;
+}
+
+.cookies-nav-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.6rem
+}
+
+.cookies-nav-container img {
+  width: 200px;
+  /* height: 10px; */
+}
+
+.arrow-back {
+  cursor: pointer;
+  position: relative;
+  justify-self: end;
+  align-self: flex-end;
+  /* margin: 20px; */
+  height: 50px;
+  left: -20px;
+  transform: scale(1.3) rotate(180deg);
+  stroke: var(--cta-color);
+  transition: all 300ms ease;
+}
+
+.arrow-back:hover {
+  stroke: var(--white)
+}

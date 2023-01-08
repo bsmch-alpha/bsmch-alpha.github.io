@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import coursesContent from "../../../courses-content.json";
 import classes from "./CoursesFullContent.module.css";
 import CoursesFullGallary from "./CoursesFullGallary";
-import { useNavigate, useParams } from "react-router-dom";
-import ReactGA from "react-ga";
+import { useParams } from "react-router-dom";
 import Modal from "../../UI/Modal";
 import {
   disableScrolling,
