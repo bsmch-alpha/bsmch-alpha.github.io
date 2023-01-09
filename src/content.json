@@ -53,49 +53,49 @@
       "title": "מסלולי תוכנה",
       "gallary": {
         "programming": {
-          "urlKey": "software-courses/programming",
+          "urlKey": "programming",
           "courseName": "מסלול תכנות",
           "courseImage": "/programming/programming_image.png",
           "text": "תוכניתן אחראי לפתח תוכנות ואפליקציות המשמשות מערכות לחימה וכן מערכות תומכות לחימה.",
           "id": 1
         },
         "qa": {
-          "urlKey": "software-courses/qa",
+          "urlKey": "qa",
           "courseName": "מסלול QA",
           "courseImage": "/QA/QA_image.png",
           "text": "אנשי ה-QA אחראיים על הבטחת האיכות של המערכות השונות בצה״ל, הכלליות והמבצעיות על מנת להבטיח שכל תהליכי הצבא עובדים בצורה האיכותית והטובה ביותר ובכך לתרום לעליונות הטכנולוגית של צהל.",
           "id": 0
         },
         "mapal": {
-          "urlKey": "software-courses/mapal",
+          "urlKey": "mapal",
           "courseName": "מסלול מפתח לומדה",
           "courseImage": "/mapal/mapal.png",
           "text": "מפתח הלומדה משובץ ביחידות פיתוח הדרכה בכלל הזרועות בצה\"ל, ואחראי על פיתוח תוצרי הדרכה מתוקשבים.",
           "id": 2
         },
         "dataAnalyst": {
-          "urlKey": "software-courses/data-analyst",
+          "urlKey": "data-analyst",
           "courseName": "מסלול Data Analyst",
           "courseImage": "/data/data_analyst.png",
           "text": "הData Analyst אחראי לעבד ולחקור את מקורות המידע של צה\"ל על מנת לייצר אנליצות מתקדמות ומערכות BI ולסייע למפקדים בצה״ל לקבל החלטות מבוססות מידע.",
           "id": 3
         },
         "ERP": {
-          "urlKey": "software-courses/erp",
+          "urlKey": "erp",
           "courseName": "מיישם ERP",
           "courseImage": "/erp/erp.jpg",
           "text": "המיישם הERP אחראי על מימוש תפיסת הERP בצה\"ל .תפיסת ERP היא לאחד את כל התהליכים השונים בארגון (גיוס עובדים, הזמנת פריטים, ניהול כספים וכו) לתוך מערכת אחת.",
           "id": 4
         },
         "lahavMatzovTochna": {
-          "urlKey": "software-courses/lahav-matzov-tochna",
+          "urlKey": "lahav-matzov-tochna",
           "courseName": "מסלול לה\"ב מצו\"ב תוכנה",
           "courseImage": "/cyber/cyber.png",
           "text": "מצו\"ב הינה היחידה הלאומית לפתרונות צופן והגנה בסייבר לגופים הביטחוניים השונים. ביחידה יוצרים מערכות נגד תקיפות סייבר באוויר, ביבשה ובים.",
           "id": 5
         },
         "psi": {
-          "urlKey": "software-courses/psi",
+          "urlKey": "psi",
           "courseName": "פס\"י",
           "courseImage": "/psi/image_psi.jpg",
           "text": " פיתוח ספקטוראלי יעודי. עוסקים בשילוב האלגוריתמים שנחקרו בצוותי המחקר בתהליכי עיבוד מתקדמים, באמצעות פיתוח תשתיות ו-low level",
@@ -108,49 +108,49 @@
       "title": "מסלולי תשתיות וסייבר",
       "gallary": {
         "magen-cyber": {
-          "urlKey": "cyber-and-system-courses/magen-cyber",
+          "urlKey": "magen-cyber",
           "courseName": "מסלול מגן סייבר",
           "courseImage": "/cyber/cyber.png",
           "text": "מגן בסייבר הוא תפקיד בצה\"ל שמטרתו להכיר את רשתות צה\"ל ולהגן עליהן מפני כל חדירה.",
           "id": 0
         },
         "devops": {
-          "urlKey": "cyber-and-system-courses/devops",
+          "urlKey": "devops",
           "courseName": "מסלול DevOps",
           "courseImage": "/devops/devops_image.png",
           "text": "אנשי DevOps מחברים בין האנשים שבונים את המערכות לבין האנשים שאחראים על התשתית. זאת באמצעות שילוב של כלים אוטומטיים, ותשתית מחשוב גמישה.",
           "id": 1
         },
         "sre": {
-          "urlKey": "cyber-and-system-courses/sre",
+          "urlKey": "sre",
           "courseName": "מסלול SRE",
           "courseImage": "/sre/sre.jpg",
           "text": "מהנדסי פרודקשן (SRE) מפתחים תהליכים אוטומטיים לעדכוני גרסאות על מנת שמערכות קריטיות לא יקרסו תחת עדכונים ושינויים. ",
           "id": 2
         },
         "DC": {
-          "urlKey": "cyber-and-system-courses/dc",
+          "urlKey": "DC",
           "courseName": "מנהל DC",
           "courseImage": "/dc/image_dc.png",
           "text": "קורס המכשיר את החניכים לנהל חוות שרתים מקצה לקצה ולהוות דרג ראשוני לתפעול תקלות בתחום.",
           "id": 3
         },
         "matas": {
-          "urlKey": "cyber-and-system-courses/matas",
+          "urlKey": "matas",
           "courseName": "מסלול מט\"ס",
           "courseImage": "/devops/devops_image.png",
           "text": "אמון על פיתוח ואינטגרציה של מערכות אוטומציה והקמת פלטפורמת חסינות לטובת פיתוח מוצרי הגנה וחיזוק CI-CD בסייבר ביחידת מצו\"ב.",
           "id": 4
         },
         "magenSpectrum": {
-          "urlKey": "cyber-and-system-courses/magen-spectrum",
+          "urlKey": "magen-spectrum",
           "courseName": "מסלול מגן ספקטרום",
           "text": "כחלק מהתפתחות הספקטרום כמימד לחימה, החייל יזהה קונפליקטים ספקטראליים וידע לשקף תמונת מצב לקבלת החלטות חשובות בשדה קרב.",
           "courseImage": "/cyber/cyber.png",
           "id": 6
         },
         "cyberDefenceExecuter": {
-          "urlKey": "cyber-and-system-courses/cyber-defence-executer",
+          "urlKey": "cyber-defence-executer",
           "courseName": "מסלול מיישם הגנה בסייבר",
           "courseImage": "/cyber/cyber.png",
           "text": "הגורם האחראי על הפעלת והטמעת מוצרי הגנה בסייבר בארגון. המיישם מהווה קו ראשון בהגנה - לזיהוי, בלימה ומניעה של תקיפות סייבר.",

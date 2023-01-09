@@ -1,6 +1,6 @@
 {
   "programming": {
-    "urlKey": "software-courses/programming",
+    "urlKey": "programming",
     "videoUrl": "https://www.youtube.com/embed/nBwBH1gpSmc",
     "title": "מסלול תכנות",
     "brief": "קורס תכנות מכשיר מפתחי תוכנה ואפליקציה אשר מפתחים מערכות לחימה ומערכות תומכות לחימה לכלל זרועות הצבא.",
@@ -56,7 +56,7 @@
     ]
   },
   "qa": {
-    "urlKey": "software-courses/qa",
+    "urlKey": "qa",
     "videoUrl": "https://www.youtube.com/embed/AYjmP9lNq2Y",
     "title": "מסלול QA",
     "brief": "אנשי ה-QA אחראיים על הבטחת האיכות של המערכות השונות בצה״ל, הכלליות והמבצעיות על מנת להבטיח שכל תהליכי הצבא עובדים בצורה האיכותית והטובה ביותר ובכך לתרום לעליונות הטכנולוגית של צהל. עליהם להישאר מעודכנים בטכנולוגיות המתקדמות ביותר ובדרכים שונות לוידוא איכות ואמינות התוכנות אותן הם בודקים.",
@@ -114,7 +114,7 @@
     ]
   },
   "mapal": {
-    "urlKey": "software-courses/mapal",
+    "urlKey": "mapal",
     "videoUrl": "https://www.youtube.com/embed/nBwBH1gpSmc",
     "title": "מסלול מפתח לומדה",
     "brief": "מפתח הלומדה משובץ ביחידות פיתוח הדרכה בכלל הזרועות בצה\"ל, ואחראי על פיתוח תוצרי הדרכה מתוקשבים.",
@@ -186,7 +186,7 @@
     ]
   },
   "devops": {
-    "urlKey": "cyber-and-system-courses/devops",
+    "urlKey": "devops",
     "videoUrl": "https://www.youtube.com/embed/nBwBH1gpSmc",
     "title": "מסלול DevOps",
     "brief": "אנשי DevOps מחברים בין האנשים שבונים את המערכות לבין האנשים שאחראים על התשתית. זאת באמצעות שילוב של כלים אוטומטיים, ותשתית מחשוב גמישה.",
@@ -244,7 +244,7 @@
     ]
   },
   "magen-cyber": {
-    "urlKey": "cyber-and-system-courses/magen-cyber",
+    "urlKey": "magen-cyber",
     "videoUrl": "https://www.youtube.com/embed/nBwBH1gpSmc",
     "title": "מגן סייבר",
     "brief": "מגן בסייבר הוא תפקיד בצה\"ל שמטרתו להכיר את רשתות צה\"ל ולהגן עליהן מפני כל חדירה. ",
@@ -299,7 +299,7 @@
     ]
   },
   "DC": {
-    "urlKey": "cyber-and-system-courses/dc",
+    "urlKey": "DC",
     "videoUrl": "https://www.youtube.com/embed/nBwBH1gpSmc",
     "title": "מנהל DC",
     "brief": "תהיתם פעם איך עולם המחשבים עובד? כמו כמעט כל דבר טכנולוגי שהשימוש בו כל כך טריוויאלי לנו כמו סתם לגלוש באינטנרט? איפה כל הדברים שמאפשרים לנו את כל הדברים האלה נמצאים בכלל?  \n התשובה היא בחוות השרתים או בקיצור dc.",
@@ -348,7 +348,7 @@
     ]
   },
   "sre": {
-    "urlKey": "cyber-and-system-courses/sre",
+    "urlKey": "sre",
     "videoUrl": "https://www.youtube.com/embed/nBwBH1gpSmc",
     "title": "מסלול SRE",
     "brief": "בעולם שבו מערכות מידע הפכו לחלק אינטגרלי בכל היבט בחיינו, כל שניה היא קריטית ובצה\"ל בפרט. פיתוח מערכות המידע בצה\"ל מציל חיים. המערכות עוטפות את כלל ההיבטים בצהל - החל מיכולות הארגון (כגון לוגיסטיקה ורפואה) עד לכדי סיכול אירועים בטחוניים.",
@@ -411,7 +411,7 @@
     ]
   },
   "erp": {
-    "urlKey": "software-courses/erp",
+    "urlKey": "erp",
     "videoUrl": "https://www.youtube.com/embed/nBwBH1gpSmc",
     "title": "מסלול erp",
     "brief": "תפיסת ה ERP היא לאחד את כל התהליכים השונים בארגון (גיוס עובדים, הזמנת פריטים, ניהול כספים וכו) לתוך מערכת אחת.",
@@ -468,7 +468,7 @@
     ]
   },
   "dataAnalyst": {
-    "urlKey": "software-courses/data-analyst",
+    "urlKey": "data-analyst",
     "videoUrl": "https://www.youtube.com/embed/nBwBH1gpSmc",
     "title": "מסלול Data Analyst",
     "brief": "הData Analyst אחראי לעבד ולחקור את מקורות המידע של צה\"ל על מנת לייצר אנליצות מתקדמות ומערכות BI ולסייע למפקדים בצה״ל לקבל החלטות מבוססות מידע.",
@@ -521,7 +521,7 @@
     ]
   },
   "lahavMatzovTochna": {
-    "urlKey": "software-courses/lahav-matzov-tochna",
+    "urlKey": "lahav-matzov-tochna",
     "videoUrl": "https://www.youtube.com/embed/nBwBH1gpSmc",
     "title": "מסלול לה\"ב מצו\"ב תוכנה",
     "brief": "מצו\"ב (מרכז צופן ובטחון) הינה היחידה הלאומית לפתרונות צופן והגנה בסייבר לגופים הביטחוניים השונים. ביחידה מתבצע מחקר ופיתוח מערכות ייעודיות כנגד תקיפות ואיומי סייבר באוויר, ביבשה ובים.",
@@ -575,7 +575,7 @@
     ]
   },
   "psi": {
-    "urlKey": "software-courses/psi",
+    "urlKey": "psi",
     "videoUrl": "https://www.youtube.com/embed/nBwBH1gpSmc",
     "title": "מסלול פס\"י",
     "brief": "פיתוח ספקטוראלי יעודי. עוסקים בשילוב האלגוריתמים שנחקרו בצוותי המחקר בתהליכי עיבוד מתקדמים, באמצעות פיתוח תשתיות ו-low level.",
@@ -625,7 +625,7 @@
     ]
   },
   "matas": {
-    "urlKey": "cyber-and-system-courses/matas",
+    "urlKey": "matas",
     "videoUrl": "https://www.youtube.com/embed/nBwBH1gpSmc",
     "title": "מסלול מט\"ס",
     "brief": "מפתח טכנולוגיות הגנתי יהיה אמון על פיתוח ואינטגרציה של מערכות אוטומציה והקמת פלטפורמת חסינות לטובת פיתוח מוצרי הגנה וחיזוק CI-CD בסייבר ביחידת מצו\"ב.",
@@ -662,7 +662,7 @@
     ]
   },
   "magenSpectrum": {
-    "urlKey": "cyber-and-system-courses/magen-spectrum",
+    "urlKey": "magen-spectrum",
     "videoUrl": "https://www.youtube.com/embed/nBwBH1gpSmc",
     "title": "מסלול מגן ספקטרום",
     "brief": "תפקיד הנמצא בליבת העשייה הצה\"לית באגף התקשוב וההגנה בסייבר, כחלק מהתפתחות הספקטרום כמימד לחימה. במסגרת תפקידו החייל יזהה קונפליקטים ספקטראליים וידע לשקף תמונת מצב ספקטראלית ומשמעויות מבצעיות. תובנות אלו מסייעות לדרגים השונים (מהגדוד ועד המטה הכללי) לקבל החלטות חשובות המשפיעות על שדה הקרב.",
@@ -716,7 +716,7 @@
     ]
   },
   "cyberDefenceExecuter": {
-    "urlKey": "cyber-and-system-courses/cyber-defence-executer",
+    "urlKey": "cyber-defence-executer",
     "videoUrl": "https://www.youtube.com/embed/nBwBH1gpSmc",
     "title": "מסלול מיישם הגנה בסייבר",
     "brief": "הגורם האחראי על הפעלת והטמעת מוצרי הגנה בסייבר בארגון. המיישם מהווה קו ראשון בהגנה - לזיהוי, בלימה ומניעה של תקיפות סייבר.",
