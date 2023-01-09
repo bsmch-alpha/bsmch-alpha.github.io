@@ -53,7 +53,7 @@ const App = () => {
             />
           }
         >
-          <Route path="courses/*" element={<CoursesFullContent />} />
+          <Route path="/*" element={<CoursesFullContent />} />
         </Route>
         <Route path="cookies-policy" element={<CookiesPolicies />} />
         <Route path="*" element={<NotFound />} />

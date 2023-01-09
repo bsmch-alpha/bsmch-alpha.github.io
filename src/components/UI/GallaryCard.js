@@ -21,7 +21,7 @@ const GallaryCard = (props) => {
       action: "modal opened",
       label: "1",
     });
-    navigate(`courses/${courseName}`);
+    navigate(`/${courseName}`);
   };
 
   return (

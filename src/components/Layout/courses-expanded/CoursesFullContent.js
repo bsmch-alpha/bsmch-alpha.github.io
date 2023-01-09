@@ -12,7 +12,7 @@ import {
 const CoursesFullContent = () => {
   const params = useParams();
 
-  const selectedCourseUrl = "/" + params[Object.keys(params)];
+  const selectedCourseUrl = params[Object.keys(params)];
 
   const content = Object.keys(coursesContent)
     .map((courseName) => {
