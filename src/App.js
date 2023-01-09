@@ -8,12 +8,21 @@ import ReactGA from "react-ga";
 import NotFound from "./pages/NotFound";
 import CookiesPolicies from "./pages/CookiesPolicies";
 
-// 4 - Add new Route with Switch so that the website will have cookies explaintion.
-// 5 - Cookies modal opens with scrolling
-// 6 - optimize
-// 7 - release
-
 const COKKIE_ENABLED = document.cookie;
+
+const activateReactGA = () => {
+  if (window.location.hostname === "localhost") {
+    return;
+  }
+
+  const TRACKING_ID = "UA-250081981-1";
+  ReactGA.initialize(TRACKING_ID);
+  ReactGA.pageview(window.location.pathname);
+};
+
+if (COKKIE_ENABLED) {
+  activateReactGA();
+}
 
 const App = () => {
   const [isCookieModalOpen, setIsCookieModalOpen] = useState(true);
@@ -21,19 +30,12 @@ const App = () => {
   const closeCookieModal = ({ userAllowedCookies = false }) => {
     setIsCookieModalOpen(false);
 
-    if (window.location.hostname === "localhost") {
-      return;
-    }
-
     if (COKKIE_ENABLED) {
       return;
     }
 
     if (userAllowedCookies) {
-      const TRACKING_ID = "UA-250081981-1";
-      ReactGA.initialize(TRACKING_ID);
-      ReactGA.pageview(window.location.pathname);
-      return;
+      activateReactGA();
     }
   };
 
