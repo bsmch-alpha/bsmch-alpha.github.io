@@ -6,7 +6,7 @@ import useExitAnimation from "../../../hooks/use-exit-animation";
 
 const CookiesValidation = (props) => {
   const { title, text } = props.content.cookies;
-  // const { linkText, urlKey } = props.content.cookies.link;
+  const { linkText, urlKey } = props.content.cookies.link;
   const { animatedClassName, handleExitAnimation } = useExitAnimation({
     className: "cookies-popup-container",
     timeout: 1000,
@@ -36,7 +36,9 @@ const CookiesValidation = (props) => {
             <h3 className={classes["cookies-title"]}>{title}</h3>
             <p className="text-white">
               {text}
-              {/* <Link>{linkText}</Link> */}
+              <Link to="cookies-policy" style={{ color: "var(--cta-color)" }}>
+                {linkText}
+              </Link>
             </p>
           </div>
           <div className={classes["cookies-btns-container"]}>
@@ -44,7 +46,7 @@ const CookiesValidation = (props) => {
               דחיית Cookies
             </Button>
             <Button btnType="primary" onClick={approveCookiesHandler}>
-              אישור{" "}
+              אישור
             </Button>
           </div>
         </div>

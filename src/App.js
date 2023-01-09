@@ -5,8 +5,6 @@ import CoursesFullContent from "./components/Layout/courses-expanded/CoursesFull
 import Info from "./pages/Info";
 import { Route, Routes } from "react-router-dom";
 import ReactGA from "react-ga";
-import CookiesValidation from "./components/Layout/cookies-validation/CookiesValidation";
-import PopupModal from "./components/UI/PopupModal";
 import NotFound from "./pages/NotFound";
 import CookiesPolicies from "./pages/CookiesPolicies";
 
@@ -22,6 +20,7 @@ const App = () => {
 
   const closeCookieModal = ({ userAllowedCookies = false }) => {
     setIsCookieModalOpen(false);
+
     if (window.location.hostname === "localhost") {
       return;
     }
@@ -42,19 +41,21 @@ const App = () => {
 
   return (
     <div className="App overlay custom">
-      {isCookieModalOpen && !COKKIE_ENABLED && (
-        <PopupModal isCookieModalOpen={isCookieModalOpen}>
-          <CookiesValidation
-            cookieModalToFalse={closeCookieModal}
-            content={content}
-          />
-        </PopupModal>
-      )}
       <Routes>
-        <Route path="/" element={<Info content={content} />}>
+        <Route
+          path="/"
+          element={
+            <Info
+              isCookieModalOpen={isCookieModalOpen}
+              isCookieEnabled={COKKIE_ENABLED}
+              closeCookieModal={closeCookieModal}
+              content={content}
+            />
+          }
+        >
           <Route path="courses/*" element={<CoursesFullContent />} />
         </Route>
-        <Route path="about-cookies" element={<CookiesPolicies />} />
+        <Route path="cookies-policy" element={<CookiesPolicies />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
