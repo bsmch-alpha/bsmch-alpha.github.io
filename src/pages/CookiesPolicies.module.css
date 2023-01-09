@@ -1,29 +1,22 @@
 .cookies-policy-container {
-  position: fixed;
   text-align: right;
-  overflow-y: hidden;
 }
 
 .cookies-policy-container section {
   text-align: right;
-  /* max-width: 900px; */
-  height: 800px;
   width: 100vw;
-  grid-row: 2;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 .cookies-policy-container section > div {
   text-align: right;
   max-width: 900px;
   margin-inline: auto;
   padding-inline: var(--white-space);
-  height: 800px;
+  height: fit-content;
+  overflow-y: auto;
   width: 100vw;
-  grid-row: 2;
 }
 
-.cookies-policy-container > section > div >h3:not(:first-child) {
+.cookies-policy-container > section > div > h3:not(:first-child) {
   margin-top: 50px;
 }
 
@@ -34,7 +27,7 @@
 }
 
 .cookies-nav-container img {
-  width: 200px;
+  width: 150px;
   /* height: 10px; */
 }
 
