@@ -10,6 +10,7 @@ import CookiesPolicies from "./pages/CookiesPolicies";
 
 const COKKIE_ENABLED = document.cookie;
 
+// Establish conection to google analytics.
 const activateReactGA = () => {
   if (window.location.hostname === "localhost") {
     return; 
@@ -41,6 +42,10 @@ const App = () => {
 
   // console.clear();
 
+  // React router 6.
+  // / = main page
+  // /* = course expanded content
+  // cookies-policy = explaination about cookies
   return (
     <div className="App overlay custom">
       <Routes>

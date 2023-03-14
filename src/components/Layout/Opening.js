@@ -20,6 +20,8 @@ const Opening = (props) => {
     />
   ));
 
+  console.log(classes);
+
   return (
     <div className={classes["opening-container"]}>
       <header className={classes.header}>

@@ -29,7 +29,7 @@ const Modal = (props) => {
       },
     });
   };
-
+  // Portal above root
   return (
     <div className={classes[animatedClassName]}>
       <CloseBtn onClick={contractCourse} />

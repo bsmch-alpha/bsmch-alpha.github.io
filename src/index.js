@@ -6,6 +6,7 @@ import { BrowserRouter, HashRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
+  // In a real domain, use BrowserRouter
   <HashRouter>
     <App />
   </HashRouter>
