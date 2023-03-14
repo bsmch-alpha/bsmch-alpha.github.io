@@ -12,7 +12,7 @@ const COKKIE_ENABLED = document.cookie;
 
 const activateReactGA = () => {
   if (window.location.hostname === "localhost") {
-    return;
+    return; 
   }
 
   const TRACKING_ID = "UA-250081981-1";
