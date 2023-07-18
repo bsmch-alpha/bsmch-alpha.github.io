@@ -17,6 +17,10 @@ const SortiesProccess = (props) => {
     <section className={classes["section-container"]}>
       <h3 className="sectionTitle">{content.title}</h3>
       {levelsElement}
+      <div style={{color : "white"}}>
+        <p>טקסט על זה שיעשו בוחן לבדוק איזה קורס הכי מתאים להםם</p>
+        <button>לבוחן</button>
+      </div>
       <div className={classes["stars-1"]}></div>
     </section>
   );
