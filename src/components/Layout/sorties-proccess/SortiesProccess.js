@@ -34,9 +34,9 @@ const SortiesProccess = (props) => {
     <section className={classes["section-container"]}>
       <h3 className="sectionTitle">{content.title}</h3>
       {levelsElement}
-      <div style={{color : "white"}}>
-        <p className="cartTitle">טקסט על זה שיעשו בוחן לבדוק איזה קורס הכי מתאים להםם</p>
-        <button onClick={() => openQuiz()} >לבוחן</button>
+      <div className={classes["quiz-text-div"]}>
+        <p className="cartTitle">מתלבטים איזה קורס הכי מתאים לכם? הנה בוחן קצר שאולי יכול לעזור:</p>
+        <button className={classes["quiz-btn"]} onClick={() => openQuiz()} >לבוחן</button>
       </div>
       <div className={classes["stars-1"]}></div>
     </section>

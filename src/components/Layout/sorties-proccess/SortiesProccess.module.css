@@ -1,3 +1,9 @@
+:root {
+  --font-family: 'Rubik', 'Arial';
+  --grey: #3c5568;
+  --white: #fff;
+}
+
 .section-container {
   display: flex;
   flex-direction: column;
@@ -22,6 +28,39 @@
 .sortiesCard {
   border-bottom: 1px solid var(--border-color);
   z-index: 5;
+}
+
+.quiz-text-div {
+  color: var(--white);
+  background-color: #0b1924;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz-btn {
+  color: var(--white);
+  background-color: var(--grey);
+  font-family: var(--font-family);
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1rem;
+  margin:1rem 3rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+  transition-property: background-color;
+}
+
+.quiz-btn:hover {
+  background-color: transparent;
+  transition: 0.3s;
+  transition-property: background-color;
 }
 
 @media screen and (min-width: 850px) {
