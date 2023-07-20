@@ -1,44 +1,37 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./Quiz.module.css"
+import quizContent from "../../../quiz-content.json"
 import Arrow from "../../SVG/Arrow";
 import { useHistory, useParams, useRouteMatch } from "react-router-dom";
 import ReactGA from "react-ga";
 
 const CoursesFullContent = (props) => {
-//   const history = useHistory();
-//   const params = useParams()
 
-//   const newUrl = params.courseId
+  const [questionNum, setQuestionNum] = useState(0)
 
-//   const content = Object.keys(coursesContent).map((courseName) => {
-//     const element = coursesContent[courseName];
-//     if (element.urlKey === props.courseUrl) {
-//       return element;
-//     }
-//   }).find(element => element !== undefined)
+  const clickOnAnswer = () => {
+    setQuestionNum(prev => prev + 1)
+  }
 
-//   const liElements =
-//     content &&
-//     content.aboutRole.map((item) => <li key={item.id}>{item.text}</li>);
+  const createAnswers = (answers) => {
 
-//   const exitModalClickHandler = () => {
-//     ReactGA.event({
-//       category: props.courseName,
-//       action: "modal closed",
-//       label: "2"
-//     })
-//     props.modalToFalse();
-//   };
+    let answerObjects = answers.map((answer, index) => (
+      <div className={classes["answer"]} onClick={() => clickOnAnswer()}>{answer}</div>
+    ))
 
-//   useEffect(() => {
-//     if (!props.isModalOpen === false) {
-//       setTimeout(() => {
-//         history.push("/");
-//       }, 300);
-//     }
-//   }, [props.isModalOpen]);
+    return answerObjects
+  }
 
-const exitModalClickHandler = () => {
+  const questionsArray = quizContent.questions.map((question, index) => (
+    <div className={classes["qustion-container"]} style={{color : "white"}}>
+      <p className={classes["question-text"]}>{question.text}</p>
+      <div className={classes["answers-container"]}>
+        {createAnswers(question.answers)}
+      </div>
+    </div>
+  ))
+
+  const exitModalClickHandler = () => {
     ReactGA.event({
       category: undefined,
       action: "modal closed",
@@ -54,6 +47,7 @@ const exitModalClickHandler = () => {
         className={classes["close-btn"]}
         onClick={exitModalClickHandler}
       ></span>
+      {questionsArray[questionNum]}
       {/* {content && (
         <>
           {/* <iframe
