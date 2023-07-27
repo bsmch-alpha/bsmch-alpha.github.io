@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import classes from "./Quiz.module.css"
 import quizContent from "../../../quiz-content.json"
 import Arrow from "../../SVG/Arrow";
-import { useHistory, useParams, useRouteMatch } from "react-router-dom";
 import ReactGA, { set } from "react-ga";
 
 const CoursesFullContent = (props) => {
 
-  const questionObjects = quizContent.questions;
+  const questions = quizContent.questions;
   const results = quizContent.results;
 
   const [questionNum, setQuestionNum] = useState(0);
@@ -29,11 +28,31 @@ const CoursesFullContent = (props) => {
 
   const functionsArray = [upSyber, upDevOps, upProgramming, upData];
 
-  const clickOnAnswer = (answer) => {
+  const clickOnAnswer = (course) => {
+    let courseNum
+    switch (course) {
+      case "Syber":
+        courseNum = 0;
+        break;
+    
+      case "Devops":
+        courseNum = 1;
+        break;
+    
+      case "Programming":
+        courseNum = 2;
+        break;
+    
+      case "Data":
+        courseNum = 3;
+        break;
+      default:
+        break;
+    }
     setQuestionNum(prev => prev + 1);
     questionNumber = questionNum;
-    functionsArray[answer]();
-    (questionNumber + 1) === questionObjects.length && checkResult();
+    functionsArray[courseNum]();
+    (questionNumber + 1) === questions.length && checkResult();
   }
 
   const checkResult = () => {
@@ -56,13 +75,13 @@ const CoursesFullContent = (props) => {
   const createAnswers = (answers) => {
 
     let answerObjects = answers.map((answer, index) => (
-      <div className={classes["answer"]} onClick={() => clickOnAnswer(index)}>{answer}</div>
+      <div className={classes["answer"]} onClick={() => clickOnAnswer(answer.course)}>{answer.text}</div>
     ))
 
     return answerObjects
   }
 
-  const questionsArray = questionObjects.map((question, index) => (
+  const questionsArray = questions.map((question, index) => (
     <div className={classes["qustion-container"]} style={{color : "white"}}>
       <p className={classes["question-text"]}>{question.text}</p>
       <div className={classes["answers-container"]}>
