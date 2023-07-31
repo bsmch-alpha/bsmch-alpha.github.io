@@ -57,7 +57,8 @@ const App = () => {
     setQuizReplayNum(prev => prev !== 5 ? (prev + 1) : prev);
   }
 
-  // console.clear();
+  console.clear();
+
   return (
     <div className="App overlay custom">
       <Info isModalOpen={isModalOpen}>

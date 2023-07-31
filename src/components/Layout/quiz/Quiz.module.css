@@ -122,3 +122,9 @@
   transition: 0.3s;
   transition-property: background-color;
 }
+
+@media screen and (min-width: 300px) {
+  .replay-btn {
+    line-height: 1rem;
+  }
+}

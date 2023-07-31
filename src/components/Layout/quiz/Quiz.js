@@ -76,14 +76,14 @@ const CoursesFullContent = (props) => {
   const createAnswers = (answers) => {
 
     let answerObjects = answers.map((answer, index) => (
-      <div className={classes["answer"]} onClick={() => clickOnAnswer(answer.course)}>{answer.text}</div>
+      <div key={index} className={classes["answer"]} onClick={() => clickOnAnswer(answer.course)}>{answer.text}</div>
     ))
 
     return answerObjects
   }
 
   const questionsArray = questions.map((question, index) => (
-    <div className={classes["qustion-container"]} style={{color : "white"}}>
+    <div key={index} className={classes["qustion-container"]} style={{color : "white"}}>
       <p className={classes["question-text"]}>{question.text}</p>
       <div className={classes["answers-container"]}>
         {createAnswers(question.answers)}
