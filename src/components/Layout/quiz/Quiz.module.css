@@ -81,6 +81,9 @@
   color: var(--white);
   width: 100%;
   margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .result-title {
@@ -96,4 +99,26 @@
   font-size: var(--text-size);
   font-weight: 400;
   padding: 1rem 3rem;
+}
+
+.replay-btn {
+  color: var(--white);
+  background-color: var(--grey);
+  font-family: var(--font-family);
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1rem;
+  margin:1rem 3rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+  transition-property: background-color;
+}
+
+.replay-btn:hover {
+  background-color: transparent;
+  transition: 0.3s;
+  transition-property: background-color;
 }

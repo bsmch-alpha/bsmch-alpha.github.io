@@ -23,7 +23,8 @@ const App = () => {
   const location = useLocation();
   const [courseUrl, setCourseUrl] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(null);
-  const [isQuizOpen, setIsQuizOpen] = useState(null)
+  const [isQuizOpen, setIsQuizOpen] = useState(null);
+  const [quizReplayNum, setQuizReplayNum] = useState(0)
   const { pathname } = location;
 
   useEffect(() => {
@@ -48,6 +49,14 @@ const App = () => {
     setIsModalOpen(true);
   };
 
+  const restartQuiz = () => {
+    setIsQuizOpen(false);
+    setTimeout(() => {
+      setIsQuizOpen(true);
+    }, 0);
+    setQuizReplayNum(prev => prev !== 5 ? (prev + 1) : prev);
+  }
+
   // console.clear();
   return (
     <div className="App overlay custom">
@@ -64,6 +73,8 @@ const App = () => {
               setIsQuizOpen={setIsQuizOpen}
               setIsModalOpen={setIsModalOpen}
               setCourseUrl={setCourseUrl}
+              quizReplayNum = {quizReplayNum}
+              restartQuiz={restartQuiz}
               />
             :
               <CoursesFullContent

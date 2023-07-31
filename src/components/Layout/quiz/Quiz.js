@@ -8,6 +8,7 @@ const CoursesFullContent = (props) => {
 
   const questions = quizContent.questions;
   const results = quizContent.results;
+  const replays = quizContent.replays;
 
   const [questionNum, setQuestionNum] = useState(0);
   let questionNumber = 0;
@@ -112,6 +113,7 @@ const CoursesFullContent = (props) => {
       <div className={classes["result-container"]}>
         <div className={classes["result-title"]} >{result}</div>
         <div className={classes["result-text"]} >{resultText}</div>
+        {(questionNum) === questions.length && <button className={classes["replay-btn"]} onClick={props.restartQuiz}>{replays[props.quizReplayNum]}</button>}
       </div>
     </article>
   );
